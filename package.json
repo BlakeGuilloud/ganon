@@ -1,0 +1,32 @@
+{
+  "name": "ganon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -Rf lib && babel src -d lib --copy-files",
+    "dist": "npm run build && webpack",
+    "start": "npm run dist && serve",
+    "test": "jest"
+  },
+  "author": "Blake Guilloud",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "babel-runtime": "^6.20.0"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "repository": "git@github.com:BlakeGuilloud/epona.git",
+  "dependencies": {
+    "jest": "^18.0.0",
+    "webpack": "^2.2.1"
+  }
+}
