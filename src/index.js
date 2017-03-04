@@ -9,17 +9,38 @@ const Ganon = (opts) => {
 }
 
 function initialize(opts) {
+  const returnVal = {};
+
   for (let prop in opts) {
-    var dog = eval(prop)(opts[prop]);
+    const cb = eval(opts[prop].type);
+
+    returnVal[prop] = cb(prop, opts[prop]);
   }
 
+  console.log('return val', returnVal);
+
   return {
+    ...returnVal,
     success: true,
   };
 }
 
-function firstName(string) {
-  return 'hello';
+function phone(prop, value) {
+  return true;
+}
+
+function email(prop, value) {
+  return true;
+}
+
+function input(prop, value) {
+  let returnVal;
+
+  if (!value || !value.value) {
+    returnVal = 'Something went wrong';
+  }
+
+  return returnVal;
 }
 
 module.exports = Ganon;
