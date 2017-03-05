@@ -4,18 +4,10 @@ const Ganon = (opts) => {
   let returnVal = {};
 
   if (opts && Object.keys(opts).length) {
-    returnVal = initialize(opts);
+    returnVal = validate(opts);
   }
 
   return returnVal;
-}
-
-function initialize(opts) {
-  const returnVal = validate(opts);
-
-  return {
-    ...returnVal,
-  };
 }
 
 function validate(opts) {
@@ -56,6 +48,12 @@ function matchPhone(object) {
   return returnVal;
 }
 
+function matchEmail(object) {
+  const returnVal = object && object.value && !object.value.match(/.+?@.+?\..+?/i);
+
+  return returnVal;
+}
+
 function phone(object, prop) {
   let returnVal;
 
@@ -64,12 +62,6 @@ function phone(object, prop) {
   if (conditional) {
     returnVal = responses[prop];
   }
-
-  return returnVal;
-}
-
-function matchEmail(object) {
-  const returnVal = object && object.value && !object.value.match(/.+?@.+?\..+?/i);
 
   return returnVal;
 }
