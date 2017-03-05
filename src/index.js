@@ -1,4 +1,4 @@
-const invalidRequest = { success: false, message: 'Please provide a "type" property for every prop.' };
+import responses from './responses';
 
 const Ganon = (opts) => {
   let returnVal = {};
@@ -24,6 +24,8 @@ function validate(opts) {
   for (let prop in opts) {
     // if no type is provided, we cant run evaluations, return an invalid request object.
     if (!opts[prop].type) {
+      const invalidRequest = { success: false, message: 'Please provide a "type" property for every prop.' };
+
       return invalidRequest;
     }
 
@@ -43,7 +45,13 @@ function validate(opts) {
 }
 
 function isRequired(object) {
-  let returnVal = !object.value && object.required ? true : false;
+  const returnVal = object && !object.value && object.required ? true : false;
+
+  return returnVal;
+}
+
+function matchPhone(object) {
+  const returnVal = object && object.value && !object.value.match(/^\+1[0-9]{10}$/);
 
   return returnVal;
 }
@@ -51,9 +59,7 @@ function isRequired(object) {
 function phone(object, prop) {
   let returnVal;
 
-  const required = isRequired(object);
-
-  const conditional = required || (object && object.value && !object.value.match(/^\+1[0-9]{10}$/));
+  const conditional = isRequired(object) || matchPhone(object);
 
   if (conditional) {
     returnVal = responses[prop];
@@ -62,10 +68,16 @@ function phone(object, prop) {
   return returnVal;
 }
 
+function matchEmail(object) {
+  const returnVal = object && object.value && !object.value.match(/.+?@.+?\..+?/i);
+
+  return returnVal;
+}
+
 function email(object, prop) {
   let returnVal;
 
-  const conditional = (!object && object.required) || (object && object.value && !object.value.match(/.+?@.+?\..+?/i));
+  const conditional = isRequired(object) || matchEmail(object);
 
   if (conditional) {
     returnVal = responses[prop];
@@ -77,7 +89,7 @@ function email(object, prop) {
 function input(object, prop) {
   let returnVal;
 
-  const conditional = (!object || !object.value) && object.required;
+  const conditional = isRequired(object);
 
   if (conditional) {
     returnVal = responses[prop];
@@ -87,11 +99,3 @@ function input(object, prop) {
 }
 
 module.exports = Ganon;
-
-const responses = {
-  age: 'Age is required',
-  firstName: 'First name is required',
-  lastName: 'Last name is required',
-  email: 'Please enter a valid email address',
-  phone: 'Please enter a valid phone number',
-};
