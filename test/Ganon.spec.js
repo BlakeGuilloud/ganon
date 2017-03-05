@@ -3,11 +3,11 @@ const state = {
   firstName: {
     type: 'input',
     required: true,
-    value: 'blake',
+    value: 'asdf',
   },
   lastName: {
     type: 'input',
-    required: false,
+    required: true,
     value: '',
   },
   age: {
@@ -18,7 +18,7 @@ const state = {
   phone: {
     type: 'phone',
     required: false,
-    value: '8438126962',
+    value: '',
   },
   email: {
     type: 'email',
@@ -49,6 +49,7 @@ describe('An empty request', () => {
 
 describe('A valid request', () => {
   const sut = Ganon(state);
+  console.log('subject under test', sut);
   it('should return a success property', () => {
     expect(sut.success).toEqual(true);
   });
