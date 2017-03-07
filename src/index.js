@@ -1,4 +1,7 @@
 import responses from './responses';
+import {
+  isEmptyObject,
+} from './helpers';
 
 const Ganon = (opts) => {
   let returnVal = {};
