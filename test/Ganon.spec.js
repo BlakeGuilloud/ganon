@@ -10,21 +10,38 @@ const state = {
     required: true,
     value: '',
   },
-  age: {
-    type: 'input',
+  birthday: {
+    type: 'birthday',
     required: true,
-    value: 26,
+    value: '1990-05-18',
   },
-  phone: {
-    type: 'phone',
-    required: false,
-    value: '',
-  },
-  email: {
+  emails: {
     type: 'email',
     required: false,
-    value: 'fbguillo@gmail.com',
+    value: [
+      {
+        id: null,
+        typeId: 4,
+        value: 'blake',
+      },
+    ],
   },
+  phones: {
+    type: 'phone',
+    required: false,
+    value: [
+      {
+        id: null,
+        typeId: 3,
+        value: '+18438126962',
+      },
+    ],
+  },
+  // email: {
+  //   type: 'email',
+  //   required: false,
+  //   value: 'fbguillo@gmail.com',
+  // },
   // CONSENT
   // locations: {
   //   type: 'array',

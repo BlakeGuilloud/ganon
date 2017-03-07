@@ -22,20 +22,17 @@ function validate(opts) {
   const returnVal = { success: true };
 
   for (let prop in opts) {
-    // if no type is provided, we cant run evaluations, return an invalid request object.
     if (!opts[prop].type) {
-      const invalidRequest = { success: false, message: 'Please provide a "type" property for every prop.' };
-
-      return invalidRequest;
+      return {
+        success: false,
+        message: 'Please provide a "type" property for every prop.',
+      };
     }
 
-    // evaluate the type provided, and declare the function to be run during this check.
-    const func = eval(opts[prop].type);
+    const func = setFunction(opts[prop]);
 
-    // set the return val[prop] equal to the requested validation function.
-    returnVal[prop] = func(opts[prop], prop);
-
-    // if there is no property on the return, delete it entirely.
+    returnVal[prop] = func ? func(opts[prop], prop) : null;
+    console.log('return val', returnVal);
     if (!returnVal[prop]) {
       delete returnVal[prop];
     }
@@ -44,26 +41,26 @@ function validate(opts) {
   return returnVal;
 }
 
+function setFunction(object) {
+  let returnVal;
+
+  if (typeof object.value === 'array') {
+    returnVal = object.value[0] ? eval(object.value[0].type) : null;
+  } else {
+    returnVal = eval(object.type);
+  }
+
+  return returnVal;
+}
+
 function isRequired(object) {
-  const returnVal = object && !object.value && object.required ? true : false;
+  const returnVal = object && !object.value && object.required;
 
   return returnVal;
 }
 
 function matchPhone(object) {
-  const returnVal = object && object.value && !object.value.match(/^\+1[0-9]{10}$/);
-
-  return returnVal;
-}
-
-function phone(object, prop) {
-  let returnVal;
-
-  const conditional = isRequired(object) || matchPhone(object);
-
-  if (conditional) {
-    returnVal = responses[prop];
-  }
+  const returnVal = object && object.value && !object.value.match(/^\+1[0-9]{10}$/) ? true : false;
 
   return returnVal;
 }
@@ -74,14 +71,38 @@ function matchEmail(object) {
   return returnVal;
 }
 
-function email(object, prop) {
-  let returnVal;
+function phone(object) {
+  let returnVal = {};
 
-  const conditional = isRequired(object) || matchEmail(object);
+  for (let i = 0; i < object.value.length; i++) {
+    const key = object.value[i];
+    const conditional = isRequired(key) || matchPhone(key);
 
-  if (conditional) {
-    returnVal = responses[prop];
+    if (conditional) {
+      returnVal[`userPhones-${i}`] = responses[object.type];
+    }
   }
+
+  return returnVal;
+}
+
+function email(object) {
+  let returnVal = {};
+
+  for (let i = 0; i < object.value.length; i++) {
+    const key = object.value[i];
+    const conditional = isRequired(key) || matchEmail(key);
+
+    if (conditional) {
+      returnVal[`userEmails-${i}`] = responses[object.type];
+    }
+  }
+
+  return returnVal;
+}
+
+function birthday(object, prop) {
+  let returnVal;
 
   return returnVal;
 }

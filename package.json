@@ -25,13 +25,11 @@
     "babel-runtime": "^6.20.0",
     "jest": "^18.1.0",
     "jest-cli": "^19.0.2",
-    "npm-watch": "^0.1.8"
+    "npm-watch": "^0.1.8",
+    "webpack": "^2.2.1"
   },
   "files": [
     "dist/**"
   ],
-  "repository": "git@github.com:BlakeGuilloud/epona.git",
-  "dependencies": {
-    "webpack": "^2.2.1"
-  }
+  "repository": "git@github.com:BlakeGuilloud/Ganon.git"
 }
