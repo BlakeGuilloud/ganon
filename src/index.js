@@ -1,7 +1,7 @@
 import responses from './responses';
-import {
-  isEmptyObject,
-} from './helpers';
+import { isEmptyObject, isRequired, invalidRequest } from './helpers';
+import { matchPhone } from './phoneHelpers';
+import { matchEmail } from './emailHelpers';
 
 const Ganon = (opts) => {
   let returnVal = {};
@@ -41,66 +41,12 @@ function validate(opts) {
   return returnVal;
 }
 
-function isEmptyObject(value) {
-  let returnVal = false;
-
-  if (typeof value === 'object' && !Object.keys(value).length) {
-    returnVal = true;
-  }
-
-  return returnVal;
-}
-
-function invalidRequest(prop, value) {
-  return { success: false, message: `Please provide a "${prop}" property for every prop. (${value})` };
-}
-
 function evaluateProp(opts, prop) {
   const func = eval(opts[prop].type);
 
   const returnVal = func ? func(opts[prop], prop) : null;
 
   return returnVal;
-}
-
-function isRequired(object) {
-  const returnVal = object && !object.value && object.required;
-
-  return returnVal;
-}
-
-function matchPhone(object) {
-  const returnVal = object && object.value && checkPhoneRegex(object.value);
-
-  return returnVal;
-}
-
-function checkPhoneRegex(value) {
-  const newValue = stripPhone(value);
-
-  return !newValue.match(/^\+1[0-9]{10}$/);
-}
-
-function stripPhone(value) {
-  let returnVal = value.replace(/[^0-9]/g, '');
-
-  if (returnVal[0] === '1') {
-    returnVal = `+${returnVal}`;
-  } else {
-    returnVal = `+1${returnVal}`;
-  }
-
-  return returnVal;
-}
-
-function matchEmail(object) {
-  const returnVal = object && object.value && matchEmailRegex(object.value);
-
-  return returnVal;
-}
-
-function matchEmailRegex(value) {
-  return !value.match(/.+?@.+?\..+?/i);
 }
 
 function phone(object) {

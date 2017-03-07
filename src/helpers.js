@@ -7,3 +7,13 @@ export function isEmptyObject(value) {
 
   return returnVal;
 }
+
+export function invalidRequest(prop, value) {
+  return { success: false, message: `Please provide a "${prop}" property for every prop. (${value})` };
+}
+
+export function isRequired(object) {
+  const returnVal = object && !object.value && object.required;
+
+  return returnVal;
+}
