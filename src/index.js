@@ -23,17 +23,14 @@ function validate(opts) {
 
   for (let prop in opts) {
     if (!opts[prop].type) {
-      return {
-        success: false,
-        message: 'Please provide a "type" property for every prop.',
-      };
+      return invalidRequest('type', prop);
     }
 
-    const func = setFunction(opts[prop]);
+    returnVal[prop] = evaluateProp(opts, prop);
 
-    returnVal[prop] = func ? func(opts[prop], prop) : null;
-    console.log('return val', returnVal);
     if (!returnVal[prop]) {
+      delete returnVal[prop];
+    } else if (isEmptyObject(returnVal[prop])) {
       delete returnVal[prop];
     }
   }
@@ -41,14 +38,24 @@ function validate(opts) {
   return returnVal;
 }
 
-function setFunction(object) {
-  let returnVal;
+function isEmptyObject(value) {
+  let returnVal = false;
 
-  if (typeof object.value === 'array') {
-    returnVal = object.value[0] ? eval(object.value[0].type) : null;
-  } else {
-    returnVal = eval(object.type);
+  if (typeof value === 'object' && !Object.keys(value).length) {
+    returnVal = true;
   }
+
+  return returnVal;
+}
+
+function invalidRequest(prop, value) {
+  return { success: false, message: `Please provide a "${prop}" property for every prop. (${value})` };
+}
+
+function evaluateProp(opts, prop) {
+  const func = eval(opts[prop].type);
+
+  const returnVal = func ? func(opts[prop], prop) : null;
 
   return returnVal;
 }
@@ -60,15 +67,37 @@ function isRequired(object) {
 }
 
 function matchPhone(object) {
-  const returnVal = object && object.value && !object.value.match(/^\+1[0-9]{10}$/) ? true : false;
+  const returnVal = object && object.value && checkPhoneRegex(object.value);
+
+  return returnVal;
+}
+
+function checkPhoneRegex(value) {
+  const newValue = stripPhone(value);
+
+  return !newValue.match(/^\+1[0-9]{10}$/);
+}
+
+function stripPhone(value) {
+  let returnVal = value.replace(/[^0-9]/g, '');
+
+  if (returnVal[0] === '1') {
+    returnVal = `+${returnVal}`;
+  } else {
+    returnVal = `+1${returnVal}`;
+  }
 
   return returnVal;
 }
 
 function matchEmail(object) {
-  const returnVal = object && object.value && !object.value.match(/.+?@.+?\..+?/i);
+  const returnVal = object && object.value && matchEmailRegex(object.value);
 
   return returnVal;
+}
+
+function matchEmailRegex(value) {
+  return !value.match(/.+?@.+?\..+?/i);
 }
 
 function phone(object) {
@@ -76,6 +105,7 @@ function phone(object) {
 
   for (let i = 0; i < object.value.length; i++) {
     const key = object.value[i];
+
     const conditional = isRequired(key) || matchPhone(key);
 
     if (conditional) {
@@ -91,6 +121,7 @@ function email(object) {
 
   for (let i = 0; i < object.value.length; i++) {
     const key = object.value[i];
+
     const conditional = isRequired(key) || matchEmail(key);
 
     if (conditional) {
@@ -107,7 +138,13 @@ function birthday(object, prop) {
   return returnVal;
 }
 
-function input(object, prop) {
+function location(object, prop) {
+  let returnVal;
+
+  return returnVal;
+}
+
+function string(object, prop) {
   let returnVal;
 
   const conditional = isRequired(object);

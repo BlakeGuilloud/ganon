@@ -1,14 +1,19 @@
 const Ganon = require('../dist/ganon.min');
 const state = {
   firstName: {
-    type: 'input',
+    type: 'string',
     required: true,
-    value: 'asdf',
+    value: 'Forrest',
+  },
+  middleName: {
+    type: 'string',
+    required: false,
+    value: 'Blake',
   },
   lastName: {
-    type: 'input',
+    type: 'string',
     required: true,
-    value: '',
+    value: 'Guilloud',
   },
   birthday: {
     type: 'birthday',
@@ -17,12 +22,17 @@ const state = {
   },
   emails: {
     type: 'email',
-    required: false,
+    required: true,
     value: [
       {
         id: null,
         typeId: 4,
         value: 'blake',
+      },
+      {
+        id: null,
+        typeId: 4,
+        value: 'blake@rhinogram.com',
       },
     ],
   },
@@ -35,8 +45,23 @@ const state = {
         typeId: 3,
         value: '+18438126962',
       },
+      {
+        id: null,
+        typeId: 3,
+        value: '(843) 812-6986',
+      },
     ],
   },
+  locations: {
+    type: 'location',
+    required: true,
+    value: [
+      {
+        locationId: 3,
+        userTypeId: 19,
+      },
+    ],
+  }
   // email: {
   //   type: 'email',
   //   required: false,
