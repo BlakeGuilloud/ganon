@@ -64,4 +64,13 @@ describe('isRequired()', () => {
       expect(sut).toBe(false);
     });
   });
+
+  describe('an object that is not required', () => {
+    const sut = isRequired({ value: 'Blake', type: 'input', required: false });
+
+    it('should return a falsy value', () => {
+      expect(sut).toBeFalsy();
+      expect(sut).toBe(false);
+    });
+  });
 });
