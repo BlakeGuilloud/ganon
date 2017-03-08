@@ -17,6 +17,9 @@ const responses = {
   phone: {
     message: 'Please enter a valid phone number',
   },
+  locations: {
+    message: 'Locations are required',
+  },
 };
 
 module.exports = responses;

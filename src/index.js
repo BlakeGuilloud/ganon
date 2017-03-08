@@ -103,10 +103,11 @@ function location(object, prop) {
   let returnVal;
 
   const conditional = object.required && !object.value.length;
-
+  console.log('object', prop);
   if (conditional) {
-    returnVal = 'Locations are required';
+    returnVal = responses[prop];
   }
+  console.log('return val in locatin', returnVal);
 
   return returnVal;
 }
