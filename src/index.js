@@ -1,34 +1,39 @@
 import responses from './responses';
+import { isEmptyObject, isRequired, invalidRequest } from './helpers';
+import { matchPhone } from './phoneHelpers';
+import { matchEmail } from './emailHelpers';
 
 const Ganon = (opts) => {
   let returnVal = {};
 
   if (opts && Object.keys(opts).length) {
-    returnVal = validate(opts);
+    returnVal = initialize(opts);
   }
 
   return returnVal;
+}
+
+function initialize(opts) {
+  const returnVal = validate(opts);
+
+  return {
+    ...returnVal,
+  };
 }
 
 function validate(opts) {
   const returnVal = { success: true };
 
   for (let prop in opts) {
-    // if no type is provided, we cant run evaluations, return an invalid request object.
     if (!opts[prop].type) {
-      const invalidRequest = { success: false, message: 'Please provide a "type" property for every prop.' };
-
-      return invalidRequest;
+      return invalidRequest('type', prop);
     }
 
-    // evaluate the type provided, and declare the function to be run during this check.
-    const func = eval(opts[prop].type);
+    returnVal[prop] = evaluateProp(opts, prop);
 
-    // set the return val[prop] equal to the requested validation function.
-    returnVal[prop] = func(opts[prop], prop);
-
-    // if there is no property on the return, delete it entirely.
     if (!returnVal[prop]) {
+      delete returnVal[prop];
+    } else if (isEmptyObject(returnVal[prop])) {
       delete returnVal[prop];
     }
   }
@@ -36,49 +41,59 @@ function validate(opts) {
   return returnVal;
 }
 
-function isRequired(object) {
-  const returnVal = object && !object.value && object.required ? true : false;
+function evaluateProp(opts, prop) {
+  const func = eval(opts[prop].type);
+
+  const returnVal = func ? func(opts[prop], prop) : null;
 
   return returnVal;
 }
 
-function matchPhone(object) {
-  const returnVal = object && object.value && !object.value.match(/^\+1[0-9]{10}$/);
+function phone(object) {
+  let returnVal = {};
 
-  return returnVal;
-}
+  for (let i = 0; i < object.value.length; i++) {
+    const key = object.value[i];
 
-function matchEmail(object) {
-  const returnVal = object && object.value && !object.value.match(/.+?@.+?\..+?/i);
+    const conditional = isRequired(key) || matchPhone(key);
 
-  return returnVal;
-}
-
-function phone(object, prop) {
-  let returnVal;
-
-  const conditional = isRequired(object) || matchPhone(object);
-
-  if (conditional) {
-    returnVal = responses[prop];
+    if (conditional) {
+      returnVal[`userPhones-${i}`] = responses[object.type];
+    }
   }
 
   return returnVal;
 }
 
-function email(object, prop) {
-  let returnVal;
+function email(object) {
+  let returnVal = {};
 
-  const conditional = isRequired(object) || matchEmail(object);
+  for (let i = 0; i < object.value.length; i++) {
+    const key = object.value[i];
 
-  if (conditional) {
-    returnVal = responses[prop];
+    const conditional = isRequired(key) || matchEmail(key);
+
+    if (conditional) {
+      returnVal[`userEmails-${i}`] = responses[object.type];
+    }
   }
 
   return returnVal;
 }
 
-function input(object, prop) {
+function birthday(object, prop) {
+  let returnVal;
+
+  return returnVal;
+}
+
+function location(object, prop) {
+  let returnVal;
+
+  return returnVal;
+}
+
+function string(object, prop) {
   let returnVal;
 
   const conditional = isRequired(object);

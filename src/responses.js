@@ -1,5 +1,5 @@
 const responses = {
-  age: 'Age is required',
+  birthday: 'Birthday is required',
   firstName: 'First name is required',
   lastName: 'Last name is required',
   email: 'Please enter a valid email address',
