@@ -13,7 +13,7 @@ describe('An empty request', () => {
 
 describe('A valid request', () => {
   const sut = Ganon(testData.testData);
-  console.log('subject under test', sut);
+
   it('should return a success property', () => {
     expect(sut.success).toEqual(true);
   });
