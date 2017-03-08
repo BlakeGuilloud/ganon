@@ -20,9 +20,9 @@ export function isRequired(object) {
   return returnVal;
 }
 
-export function getResponse(object) {
+export function getResponse(object, key) {
   const returnVal = {
-    message: object.message || responses[object.type],
+    message: object.message || responses[key],
   };
 
   return returnVal;

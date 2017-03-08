@@ -57,7 +57,7 @@ function phone(object) {
     const conditional = isRequired(key) || matchPhone(key);
 
     if (conditional) {
-      returnVal[`userPhones-${i}`] = getResponse(object);
+      returnVal[`userPhones-${i}`] = getResponse(object, object.type);
     }
   }
 
@@ -70,7 +70,7 @@ function loginEmail(object, prop) {
   const conditional = isRequired(object) || matchEmail(object);
 
   if (conditional) {
-    returnVal = getResponse(object);
+    returnVal = getResponse(object, object.type);
   }
 
   return returnVal;
@@ -85,7 +85,7 @@ function email(object) {
     const conditional = isRequired(key) || matchEmail(key);
 
     if (conditional) {
-      returnVal[`userEmails-${i}`] = getResponse(object);
+      returnVal[`userEmails-${i}`] = getResponse(object, object.type);
     }
   }
 
@@ -104,7 +104,7 @@ function location(object, prop) {
   const conditional = object.required && !object.value.length;
 
   if (conditional) {
-    returnVal = getResponse(object);
+    returnVal = getResponse(object, object.type);
   }
 
   return returnVal;
@@ -116,7 +116,7 @@ function string(object, prop) {
   const conditional = isRequired(object);
 
   if (conditional) {
-    returnVal = getResponse(object);
+    returnVal = getResponse(object, prop);
   }
 
   return returnVal;

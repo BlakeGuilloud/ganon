@@ -3,27 +3,17 @@ const testData = {
   firstName: {
     type: 'string',
     required: true,
-    value: 'Forrest',
-  },
-  middleName: {
-    type: 'string',
-    required: false,
-    value: 'Blake',
+    value: '',
   },
   lastName: {
     type: 'string',
     required: true,
-    value: 'Guilloud',
+    value: '',
   },
   username: {
     type: 'string',
     required: true,
     value: '',
-  },
-  birthday: {
-    type: 'birthday',
-    required: true,
-    value: '1990-05-18',
   },
   emails: {
     type: 'email',
@@ -53,7 +43,7 @@ const testData = {
       {
         id: null,
         typeId: 3,
-        value: '+18438126962',
+        value: '+18438112326962',
       },
       {
         id: null,
