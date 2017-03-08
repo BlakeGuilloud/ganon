@@ -50,23 +50,15 @@ describe('matchPhone()', () => {
   describe('when an invalid value is provided', () => {
     it('should return true', () => {
       const sut = matchPhone({ value: '123' });
+      const sut1 = matchPhone({ value: 'abc' });
+      const sut2 = matchPhone({ value: '+18882222' });
 
       expect(sut).toEqual(true);
       expect(sut).toBeTruthy();
-    });
-
-    it('should return true', () => {
-      const sut = matchPhone({ value: 'abc' });
-
-      expect(sut).toEqual(true);
-      expect(sut).toBeTruthy();
-    });
-
-    it('should return true', () => {
-      const sut = matchPhone({ value: '+18882222' });
-
-      expect(sut).toEqual(true);
-      expect(sut).toBeTruthy();
+      expect(sut1).toEqual(true);
+      expect(sut1).toBeTruthy();
+      expect(sut2).toEqual(true);
+      expect(sut2).toBeTruthy();
     });
   });
 });
