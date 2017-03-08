@@ -55,12 +55,7 @@ const testData = {
   locations: {
     type: 'location',
     required: true,
-    value: [
-      {
-        locationId: 3,
-        userTypeId: 19,
-      },
-    ],
+    value: [],
   },
 };
 
@@ -75,6 +70,7 @@ describe('An empty request', () => {
 
 describe('A valid request', () => {
   const sut = Ganon(testData);
+  console.log('sut', sut);
 
   it('should return a success property', () => {
     expect(sut.success).toEqual(true);
