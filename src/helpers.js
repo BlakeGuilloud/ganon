@@ -1,3 +1,5 @@
+import responses from './responses';
+
 export function isEmptyObject(value) {
   let returnVal = false;
 
@@ -14,6 +16,14 @@ export function invalidRequest(prop, value) {
 
 export function isRequired(object) {
   const returnVal = object && !object.value && object.required;
+
+  return returnVal;
+}
+
+export function getResponse(object) {
+  const returnVal = {
+    message: object.message || responses[object.type],
+  };
 
   return returnVal;
 }

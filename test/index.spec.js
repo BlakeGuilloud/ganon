@@ -15,6 +15,11 @@ const testData = {
     required: true,
     value: 'Guilloud',
   },
+  username: {
+    type: 'string',
+    required: true,
+    value: '',
+  },
   birthday: {
     type: 'birthday',
     required: true,
