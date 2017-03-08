@@ -1,6 +1,7 @@
 const helpers = require('../lib/helpers');
 const isEmptyObject = helpers.isEmptyObject;
 const invalidRequest = helpers.invalidRequest;
+const isRequired = helpers.isRequired;
 
 describe('isEmptyObject()', () => {
   it('should be a function', () => {
@@ -26,7 +27,7 @@ describe('isEmptyObject()', () => {
   });
 });
 
-describe('invalidRequest', () => {
+describe('invalidRequest()', () => {
   const sut = invalidRequest('type', 'firstName');
 
   it('should return an object with two properties', () => {
@@ -42,5 +43,25 @@ describe('invalidRequest', () => {
   it('should have a truthy message property', () => {
     expect(sut.message).toBeTruthy();
     expect(typeof sut.message).toEqual('string');
+  });
+});
+
+describe('isRequired()', () => {
+  describe('a required object with no value', () => {
+    const sut = isRequired({ value: '', type: 'input', required: true });
+
+    it('should return a truthy value', () => {
+      expect(sut).toBeTruthy();
+      expect(sut).toBe(true);
+    });
+  });
+
+  describe('a required object with a value', () => {
+    const sut = isRequired({ value: 'Blake', type: 'input', required: true });
+
+    it('should return a falsy value', () => {
+      expect(sut).toBeFalsy();
+      expect(sut).toBe(false);
+    });
   });
 });
