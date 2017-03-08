@@ -65,6 +65,18 @@ function phone(object) {
   return returnVal;
 }
 
+function loginEmail(object, prop) {
+  let returnVal;
+
+  const conditional = isRequired(object) || matchEmail(object);
+
+  if (conditional) {
+    returnVal = responses[prop];
+  }
+
+  return returnVal;
+}
+
 function email(object) {
   let returnVal = {};
 

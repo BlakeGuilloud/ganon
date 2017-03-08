@@ -36,6 +36,11 @@ const testData = {
       },
     ],
   },
+  loginEmail: {
+    type: 'loginEmail',
+    required: true,
+    value: ''
+  },
   phones: {
     type: 'phone',
     required: false,
