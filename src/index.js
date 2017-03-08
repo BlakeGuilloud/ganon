@@ -89,6 +89,7 @@ function birthday(object, prop) {
 
 function location(object, prop) {
   let returnVal;
+  console.log('LOCATION OBJECT!!', object);
 
   const conditional = object.required && !object.value.length;
 
