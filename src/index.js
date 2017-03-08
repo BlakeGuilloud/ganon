@@ -25,6 +25,7 @@ function validate(opts) {
   const returnVal = { success: true };
 
   for (let prop in opts) {
+    console.log('props', opts[prop]);
     if (!opts[prop].type) {
       return invalidRequest('type', prop);
     }
@@ -89,6 +90,16 @@ function birthday(object, prop) {
 
 function location(object, prop) {
   let returnVal;
+
+  for (let i = 0; i < object.value.length; i++) {
+    const key = object.value[i];
+
+    const conditional = isRequired(key);
+
+    if (conditional) {
+      returnVal = 'Locations are required';
+    }
+  }
 
   return returnVal;
 }
