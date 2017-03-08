@@ -38,9 +38,35 @@ describe('checkPhoneRegex()', () => {
 });
 
 describe('matchPhone()', () => {
-  const sut = matchPhone({ value: '8438125599' });
-  console.log('sut', sut);
-  it('should be a function', () => {
-    expect(true).toEqual(true);
-  })
+  describe('when a valid value is provided', () => {
+    const sut = matchPhone({ value: '8438125599' });
+
+    it('should return false', () => {
+      expect(sut).toEqual(false);
+      expect(sut).toBeFalsy();
+    });
+  });
+
+  describe('when an invalid value is provided', () => {
+    it('should return true', () => {
+      const sut = matchPhone({ value: '123' });
+
+      expect(sut).toEqual(true);
+      expect(sut).toBeTruthy();
+    });
+
+    it('should return true', () => {
+      const sut = matchPhone({ value: 'abc' });
+
+      expect(sut).toEqual(true);
+      expect(sut).toBeTruthy();
+    });
+
+    it('should return true', () => {
+      const sut = matchPhone({ value: '+18882222' });
+
+      expect(sut).toEqual(true);
+      expect(sut).toBeTruthy();
+    });
+  });
 });
