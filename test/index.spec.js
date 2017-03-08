@@ -72,7 +72,7 @@ describe('A valid request', () => {
   const sut = Ganon(testData);
   console.log('sut', sut);
 
-  it('should return a success property', () => {
-    expect(sut.success).toEqual(true);
+  it('should not return a success property', () => {
+    expect(sut.success).toBeFalsy();
   });
 });

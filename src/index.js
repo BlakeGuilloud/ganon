@@ -22,7 +22,7 @@ function initialize(opts) {
 }
 
 function validate(opts) {
-  const returnVal = { success: true };
+  const returnVal = {};
 
   for (let prop in opts) {
     if (!opts[prop].type) {
@@ -89,7 +89,6 @@ function birthday(object, prop) {
 
 function location(object, prop) {
   let returnVal;
-  console.log('LOCATION OBJECT!!', object);
 
   const conditional = object.required && !object.value.length;
 
