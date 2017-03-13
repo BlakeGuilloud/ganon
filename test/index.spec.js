@@ -3,22 +3,17 @@ const testData = {
   firstName: {
     type: 'string',
     required: true,
-    value: 'Forrest',
-  },
-  middleName: {
-    type: 'string',
-    required: false,
-    value: 'Blake',
+    value: '',
   },
   lastName: {
     type: 'string',
     required: true,
-    value: 'Guilloud',
+    value: '',
   },
-  birthday: {
-    type: 'birthday',
+  username: {
+    type: 'string',
     required: true,
-    value: '1990-05-18',
+    value: '',
   },
   emails: {
     type: 'email',
@@ -36,6 +31,11 @@ const testData = {
       },
     ],
   },
+  loginEmail: {
+    type: 'loginEmail',
+    required: true,
+    value: ''
+  },
   phones: {
     type: 'phone',
     required: false,
@@ -43,7 +43,7 @@ const testData = {
       {
         id: null,
         typeId: 3,
-        value: '+18438126962',
+        value: '+18438112326962',
       },
       {
         id: null,
@@ -55,12 +55,7 @@ const testData = {
   locations: {
     type: 'location',
     required: true,
-    value: [
-      {
-        locationId: 3,
-        userTypeId: 19,
-      },
-    ],
+    value: [],
   },
 };
 
@@ -75,8 +70,9 @@ describe('An empty request', () => {
 
 describe('A valid request', () => {
   const sut = Ganon(testData);
+  console.log('sut', sut);
 
-  it('should return a success property', () => {
-    expect(sut.success).toEqual(true);
+  it('should not return a success property', () => {
+    expect(sut.success).toBeFalsy();
   });
 });

@@ -1,5 +1,4 @@
-import responses from './responses';
-import { isEmptyObject, isRequired, invalidRequest } from './helpers';
+import { isEmptyObject, isRequired, invalidRequest, getResponse } from './helpers';
 import { matchPhone } from './phoneHelpers';
 import { matchEmail } from './emailHelpers';
 
@@ -22,7 +21,7 @@ function initialize(opts) {
 }
 
 function validate(opts) {
-  const returnVal = { success: true };
+  const returnVal = {};
 
   for (let prop in opts) {
     if (!opts[prop].type) {
@@ -58,8 +57,20 @@ function phone(object) {
     const conditional = isRequired(key) || matchPhone(key);
 
     if (conditional) {
-      returnVal[`userPhones-${i}`] = responses[object.type];
+      returnVal[`userPhones-${i}`] = getResponse(object, object.type);
     }
+  }
+
+  return returnVal;
+}
+
+function loginEmail(object, prop) {
+  let returnVal;
+
+  const conditional = isRequired(object) || matchEmail(object);
+
+  if (conditional) {
+    returnVal = getResponse(object, object.type);
   }
 
   return returnVal;
@@ -74,7 +85,7 @@ function email(object) {
     const conditional = isRequired(key) || matchEmail(key);
 
     if (conditional) {
-      returnVal[`userEmails-${i}`] = responses[object.type];
+      returnVal[`userEmails-${i}`] = getResponse(object, object.type);
     }
   }
 
@@ -90,6 +101,12 @@ function birthday(object, prop) {
 function location(object, prop) {
   let returnVal;
 
+  const conditional = object.required && !object.value.length;
+
+  if (conditional) {
+    returnVal = getResponse(object, object.type);
+  }
+
   return returnVal;
 }
 
@@ -99,7 +116,7 @@ function string(object, prop) {
   const conditional = isRequired(object);
 
   if (conditional) {
-    returnVal = responses[prop];
+    returnVal = getResponse(object, prop);
   }
 
   return returnVal;
