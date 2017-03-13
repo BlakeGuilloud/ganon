@@ -2,19 +2,22 @@ const Ganon = require('../lib/refactor');
 const cleanRequest = {
   firstName: {
     dataType: 'string',
-    name: 'input',
     required: true,
+    message: 'First name das required',
     value: 'Blake',
+  },
+  lastName: {
+    dataType: 'string',
+    required: false,
+    value: '',
   },
   loginEmail: {
     dataType: 'string',
-    name: 'loginEmail',
     required: true,
     value: 'blake@rhinogram.com',
   },
   locations: {
     dataType: 'array',
-    name: 'locations',
     required: true,
     value: [
       {
@@ -28,7 +31,7 @@ const cleanRequest = {
 describe('refactor', () => {
   describe('A clean request', () => {
     const sut = Ganon(cleanRequest);
-
+    console.log('sut', sut);
     it('should return an empty object', () => {
       expect(sut).toEqual({});
     });
