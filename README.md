@@ -3,6 +3,8 @@ A functional javascript library designed and built by open source contributors.
 
 The project as it stands is extremely barebones and will eventually need some production minification techniques in place, as well as proper compilers for use in all versions of javascript, but for now, let's build some methods!
 
+[![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon)
+
 ### Objective
 To build a suite of javascript methods by the time [hacktoberfest](https://hacktoberfest.digitalocean.com/) ends! Let's get some T-shirts!!
 
