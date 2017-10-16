@@ -23,6 +23,8 @@ All tests will live in the `test` directory. A test file should be formatted `[m
 5. Push to your fork
 6. Open a pull request in this repo!
 
+#### A pull request will most likely be denied if it does not contain a skeleton method for someone else to work on!
+
 ### Development
 While building new features, we are utilizing the [Jest](https://github.com/facebook/jest) testing framework for writing all of our unit tests.
 
