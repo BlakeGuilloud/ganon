@@ -1,0 +1,14 @@
+{
+  "name": "ganon",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": "git@github.com:BlakeGuilloud/ganon.git",
+  "author": "Blake Guilloud <blake.guilloud@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
