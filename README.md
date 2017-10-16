@@ -5,6 +5,19 @@ The project as it stands is extremely barebones and will eventually need some pr
 
 [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon)
 
+
+### Usage
+```
+$ yarn add ganon
+```
+
+```javascript
+const { sum } = require('ganon');
+
+const sumOfOneAndTwo = sum(1, 2);
+=> 3
+```
+
 ### Objective
 To build a suite of javascript methods by the time [hacktoberfest](https://hacktoberfest.digitalocean.com/) ends! Let's get some T-shirts!!
 
