@@ -1,4 +1,4 @@
-const { max } = require('./lib/max');
+const { max } = require('../lib');
 
 
 
