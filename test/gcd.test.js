@@ -1,6 +1,4 @@
-const {
-  gcd
-} = require('../lib');
+const { gcd } = require('../lib');
 
 test('Basic: gcd of 54 and 24 is 6', () => {
   expect(gcd(54, 24)).toBe(6);
@@ -20,6 +18,7 @@ test('2 Negative: gcd of -54 and -24 is 6', () => {
 
 test('gcd of 0 and 1 should throw error', () => {
   expect(() => {
-    gcd(0, 1);
+gcd(0, 1);
   }).toThrow();
 });
+
