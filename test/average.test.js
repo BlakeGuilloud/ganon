@@ -15,3 +15,7 @@ test('average of ["hello world"] to equal undefined', () => {
 test('average of ["hello world", 2, 3] to equal 2.5', () => {
   expect(average(["hello world", 2, 3])).toBe(2.5);
 });
+
+test('average of [1,2,3,4,5] to equal 3', () => {
+  expect(average([1,2,3,4,5])).toBe(3);
+});
