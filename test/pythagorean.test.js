@@ -5,5 +5,5 @@ test('A right triangle with sides 3 and 4 have a hypotonuse of 5', () => {
 });
 
 test('A right triangle with sides 1 and 1 have a hypotonuse of square root of 2', () => {
-  expect(exponent(1, 1)).toBe(Math.sqrt(2));
+  expect(pythagorean(1, 1)).toBe(Math.sqrt(2));
 });
