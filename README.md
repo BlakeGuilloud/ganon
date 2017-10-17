@@ -9,7 +9,7 @@ The project as it stands is extremely barebones and will eventually need some pr
 
 
 ### Usage
-```
+```bash
 $ yarn add ganon
 ```
 
@@ -62,7 +62,7 @@ module.exports = sum;
 
 In order to test this method, we will first run `yarn test sum`:
 
-```
+```bash
 $ yarn test sum
 
   FAIL  problems/sum.test.js
@@ -93,7 +93,7 @@ module.exports = sum;
 
 Run the test again:
 
-```
+```bash
 $ yarn test sum
   
   PASS  problems/sum.test.js
