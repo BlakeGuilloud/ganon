@@ -6,9 +6,11 @@
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "eslint": "^4.9.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ./lib ./test"
   }
 }
