@@ -958,6 +958,10 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
+ganon@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/ganon/-/ganon-2.0.6.tgz#086852ea4125b1a00131d03f7a41fc27f72d9c68"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -970,6 +974,10 @@ gauge@~2.7.3:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
+
+gcd@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/gcd/-/gcd-0.0.1.tgz#41e0bb60bcc9245635419860a22544b230ba2f75"
 
 get-caller-file@^1.0.1:
   version "1.0.2"
