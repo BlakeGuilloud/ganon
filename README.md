@@ -37,6 +37,7 @@ All tests will live in the `test` directory. A test file should be formatted `[m
 4. Write the skeleton of a new method
 5. Push to your fork
 6. Open a pull request in this repo!
+7. Be totally rad if your pull request gets merged in and create a new Issue for the skeleton you built!
 
 If you see an issue that you wish to work on please @mention me (@BlakeGuilloud), and I will apply the "in progress" label to the issue.
 
