@@ -9,7 +9,7 @@ The project as it stands is extremely barebones and will eventually need some pr
 
 
 ### Usage
-```
+```bash
 $ yarn add ganon
 ```
 
@@ -38,6 +38,12 @@ All tests will live in the `test` directory. A test file should be formatted `[m
 5. Push to your fork
 6. Open a pull request in this repo!
 
+If you see an issue that you wish to work on please @mention me (@BlakeGuilloud), and I will apply the "in progress" label to the issue.
+
+Please try to avoid working on issues that are "in progress", as we want to give anyone who wishes to contribute enough time to complete the issue.
+
+If you think of any other methods that this project should have, please feel free to make a pull request! But for each method you resolve, make sure to add one for someone else to work on!
+
 ### Development
 While building new features, we are utilizing the [Jest](https://github.com/facebook/jest) testing framework for writing all of our unit tests.
 
@@ -62,7 +68,7 @@ module.exports = sum;
 
 In order to test this method, we will first run `yarn test sum`:
 
-```
+```bash
 $ yarn test sum
 
   FAIL  problems/sum.test.js
@@ -93,7 +99,7 @@ module.exports = sum;
 
 Run the test again:
 
-```
+```bash
 $ yarn test sum
   
   PASS  problems/sum.test.js
