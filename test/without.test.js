@@ -12,7 +12,7 @@ describe('without', () => {
 
   it('should return same identity if given element is not present', () => {
     const array = [1, 2, 3];
-    expect(without([1, 2, 3], 4)).toBe(array);
+    expect(without(array, 4)).toBe(array);
   });
 
   it('should return a copy of the array without the provided element', () => {
@@ -28,7 +28,7 @@ describe('without', () => {
 
     expect(without(array, item)).toEqual([{ a: 2 }, 2, 3]);
     expect(without(array, { a: 2 })).toBe(array);
-    expect(without(array, 3)).toEqual([item, { a: 2 }, 4]);
+    expect(without(array, 3)).toEqual([item, { a: 2 }, 2]);
   });
 
   it('should take all arguments after the first and remove all of them', () => {
