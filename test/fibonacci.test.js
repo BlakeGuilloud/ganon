@@ -13,5 +13,5 @@ test('Hundedth Fibonacci number (index 99) is 218922995834555169026', () => {
 });
 
 test('Negative index produces error', () => {
-  expect(fibonacci(-1)).toThrowError('Index cannot be negative');
+  expect(fibonacci(-1)).toThrow(Error);
 });
