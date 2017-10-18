@@ -12,5 +12,5 @@ test('reverses an integer', () => {
 
 test('reverse an array', () => {
   expect(() => reverse([1, 2, 3, 4]))
-    .toThrow(new Error('Type noy allowed'));
+    .toThrow(new Error('Type not allowed'));
 });
