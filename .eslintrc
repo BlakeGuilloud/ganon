@@ -2,6 +2,11 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
   "rules": {
     "camelcase": ["error", { "properties": "always" }],
     "func-call-spacing": ["error", "never"],
