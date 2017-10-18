@@ -18,6 +18,7 @@
     "no-whitespace-before-property": "error",
     "no-trailing-spaces": "error",
     "semi": ["error", "always"],
-    "space-infix-ops": ["error", {"int32Hint": false}]
+    "space-infix-ops": ["error", {"int32Hint": false}],
+    "quotes": ["error", "double"]
   }
 }
