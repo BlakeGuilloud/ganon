@@ -1,6 +1,4 @@
-const {
-  reverse
-} = require("../lib");
+const { reverse } = require("../lib");
 
 test("reverses a string", () => {
   expect(reverse("Blake Guilloud")).toBe("duolliuG ekalB");
