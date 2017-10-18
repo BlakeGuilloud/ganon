@@ -1,5 +1,5 @@
 
-const  decrement  = require('../lib/decrement');
+const  { decrement }  = require('../lib');
 test('decrement of 1 to equal 0', () => {
   expect(decrement(1)).toBe(0);
 });
