@@ -5,7 +5,7 @@ A functional javascript library designed and built by open source contributors.
 
 The project as it stands is extremely barebones and will eventually need some production minification techniques in place, as well as proper compilers for use in all versions of javascript, but for now, let's build some methods!
 
-[![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon)
+[![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
 
 
 ### Usage
@@ -37,6 +37,8 @@ All tests will live in the `test` directory. A test file should be formatted `[m
 4. Write the skeleton of a new method
 5. Push to your fork
 6. Open a pull request in this repo!
+7. Be totally rad if your pull request gets merged in and create a new Issue for the skeleton you built!
+8. Star this repository to keep up with it's progress!
 
 If you see an issue that you wish to work on please @mention me (@BlakeGuilloud), and I will apply the "in progress" label to the issue.
 
