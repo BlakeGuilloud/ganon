@@ -1,4 +1,4 @@
-const { fibonacci } = require('../lib');
+const { fibonacci } = require("../lib");
 
 test('First Fibonacci number (index 0) is 0', () => {
     expect(fibonacci(0)).toBe(1);

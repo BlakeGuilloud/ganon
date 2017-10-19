@@ -1,23 +1,23 @@
-const { permute } = require('../lib');
+const { permute } = require("../lib");
 
-describe('permute', () => {
-  it('should throw when the first argument is not an array', () => {
+describe("permute", () => {
+  it("should throw when the first argument is not an array", () => {
     expect(() => permute()).toThrow();
     expect(() => permute(5)).toThrow();
     expect(() => permute([])).not.toThrow();
   });
 
-  it('should return an empty array when an empty array is supplied', () => {
+  it("should return an empty array when an empty array is supplied", () => {
     const result = permute([]);
 
     expect(result).toEqual([]);
   });
 
-  it('should return array with one element (the input) when given an iterable of size 1', () => {
+  it("should return array with one element (the input) when given an iterable of size 1", () => {
     expect(permute([1])).toEqual([[1]]);
   });
 
-  it('should return all permutations when given an array', () => {
+  it("should return all permutations when given an array", () => {
     const cases = [
       {
         input: [1, 2],
