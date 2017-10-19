@@ -27,6 +27,6 @@
     "prepublish": "npm run clean && npm run build"
   },
   "pre-commit": [
-    // "lint"
+    "lint"
   ]
 }
