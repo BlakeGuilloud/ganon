@@ -1,10 +1,10 @@
 const { isEven } = require('./lib');
 
-test('10 is even', () => {
+test("10 is even", () => {
   expect(isEven(10)).toBe(true);
 });
 
-test('5 is even', () => {
+test("5 is even", () => {
   expect(isEven(5)).toBe(false);
 });
 
