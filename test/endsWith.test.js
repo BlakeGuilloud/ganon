@@ -8,8 +8,8 @@ describe("endsWith(targetString, substring)", () => {
   });
 
   it("returns false when targetString does not end with substring", () => {
-    expect("hey", "he").toBe(false);
-    expect("cammelCase", "case").toBe(false);
-    expect("", "test").toBe(false);
+    expect(endsWith("hey", "he")).toBe(false);
+    expect(endsWith("cammelCase", "case")).toBe(false);
+    expect(endsWith("", "test")).toBe(false);
   });
 });
