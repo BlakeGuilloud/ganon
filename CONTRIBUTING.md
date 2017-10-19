@@ -9,7 +9,7 @@ Thank you for contributing to Ganon! We thrilled to have developers of all level
 
 ### Claiming an Issue
   * [View Issues](https://github.com/BlakeGuilloud/ganon/issues) that are currently seeking help from the community. 
-  * Find an method, a bug, or a new feature that you wish to work on.
+  * Find a method, a bug, or a new feature that you wish to work on.
   * Please refrain from working on issues that have the label "in progress" applied to them.
   * Mention me in a comment of the respective issue: "@BlakeGuilloud I would like to work on this".
   * The "in progress" label will be applied to the issue, and you will be given 24 hours to complete the task. If you need more time, please @BlakeGuilloud me and I will happily oblige.
