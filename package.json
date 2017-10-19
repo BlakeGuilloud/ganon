@@ -1,6 +1,6 @@
 {
   "name": "ganon",
-  "version": "2.0.7",
+  "version": "2.0.10",
   "main": "dist/index.js",
   "repository": "git@github.com:BlakeGuilloud/ganon.git",
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
@@ -22,6 +22,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "babel lib --out-dir dist",
+    "fix": "eslint ./lib ./test --fix",
     "test": "jest",
     "lint": "eslint ./lib ./test",
     "prepublish": "npm run clean && npm run build"
