@@ -1,5 +1,6 @@
 {
   "parser": "babel-eslint",
+  "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 6
   },
@@ -11,6 +12,8 @@
   },
   "rules": {
     "camelcase": ["error", { "properties": "always" }],
+    "no-unused-vars": 0,
+    "no-useless-escape": ["error"],
     "func-call-spacing": ["error", "never"],
     "indent": ["error", 2],
     "no-console": "error",
