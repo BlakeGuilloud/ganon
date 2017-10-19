@@ -5,7 +5,7 @@ test("Should return whole array if count is zero", () => {
 });
 
 test("Should return without first N elements if array length is >= N", () => {
-  expect(drop([1,2,3],2)).toEqual([2]);
+  expect(drop([1,2,3],2)).toEqual([3]);
 });
 
 test("Should return empty array if array length is < N", () => {
