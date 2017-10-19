@@ -13,7 +13,6 @@
   "rules": {
     "camelcase": ["error", { "properties": "always" }],
     "no-unused-vars": 0,
-    "no-useless-escape": ["error"],
     "func-call-spacing": ["error", "never"],
     "indent": ["error", 2],
     "no-console": "error",
