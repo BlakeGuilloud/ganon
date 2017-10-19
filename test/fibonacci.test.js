@@ -13,12 +13,12 @@ test("Hundredth Fibonacci number (index 99) produces error - solution is 2189229
   function fibonacciOverflowTest() {
     fibonacci(99);
   }
-  expect(fibonacci_overflow_test).toThrowError("Solution overflows JavaScript integer");
+  expect(fibonacciOverflowTest).toThrowError("Solution overflows JavaScript integer");
 });
 
 test("Negative index produces error", () => {
   function fibonacciOverflowTest() {
     fibonacci(-1);
   }
-  expect(fibonacci_negative_test).toThrowError("Index cannot be negative");
+  expect(fibonacciOverflowTest).toThrowError("Index cannot be negative");
 });
