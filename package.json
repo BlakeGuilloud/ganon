@@ -1,6 +1,6 @@
 {
   "name": "ganon",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "main": "dist/index.js",
   "repository": "git@github.com:BlakeGuilloud/ganon.git",
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
