@@ -1,5 +1,5 @@
-const { rot13 } = require('../lib');
+const { rot13 } = require("../lib");
 
-test('rot13', () => {
+test("rot13", () => {
   expect(rot13("Hello")).toBe("Uryyb");
 });
