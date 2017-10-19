@@ -3,3 +3,5 @@ node_js:
   - "node"
 notifications:
   email: false
+script:
+  - "npm run lint"
