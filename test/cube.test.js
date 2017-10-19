@@ -5,7 +5,7 @@ test("cube of 1 should be 1", () => {
 });
 
 test("cube of 4 should be 64", () => {
-  expect(cube(4).toBe(64));
+  expect(cube(4)).toBe(64);
 });
 
 test("negative", () => {
