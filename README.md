@@ -40,7 +40,7 @@ The method we are going to resolve is called `sum`:
 // lib/sum.js
 
 function sum(a, b) {
-  // Your code goes here.
+// Your code goes here.
 }
 
 module.exports = sum;
@@ -95,7 +95,7 @@ Now that I have fixed the sum function to return the desired value, I need to wr
 // Write a function that returns the difference of the first two parameters
 
 function difference(a, b) {
-  // Your code goes here.
+// Your code goes here.
 }
 
 module.exports = difference;
