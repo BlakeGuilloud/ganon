@@ -10,7 +10,7 @@ describe("fibonacci", () => {
   });
 
   //Integers (numbers without a period or exponent notation) are accurate up to 15 digits (https://www.w3schools.com/js/js_numbers.asp).
-  test("Hundredth Fibonacci number (index 99) produces error - solution is 218922995834555169026, but JS can\'t represent it precisely", () => {
+  test("Hundredth Fibonacci number (index 99) produces error - solution is 218922995834555169026, but JS can't represent it precisely", () => {
     function fibonacciOverflowTest() {
       fibonacci(99);
     }

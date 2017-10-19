@@ -25,7 +25,7 @@
     "build": "babel lib --out-dir dist",
     "fix": "eslint ./lib ./test --fix",
     "test": "jest",
-    "lint": "eslint ./lib ./test",
+    "lint": "eslint --no-eslintrc -c .eslintrc ./lib ./test",
     "prepublish": "npm run clean && npm run build"
   },
   "pre-commit": [
