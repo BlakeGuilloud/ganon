@@ -9,5 +9,5 @@ test("Sign of a postive number should be 1", () => {
 });
 
 test("Sign of a NaN should be NaN", () => {
-  expect(sign(NaN)).toBe(NaN);
+  expect(sign(NaN)).toBeFalsy();
 });
