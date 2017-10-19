@@ -1,23 +1,23 @@
-const { flow } = require("../lib");
+const { pipe } = require("../lib");
 
 
-describe("flow", () => {
+describe("pipe", () => {
   it("should return a function", () => {
-    expect(flow()).toBeInstanceOf(Function);
-    expect(flow(x => x, x => x)).toBeInstanceOf(Function);
+    expect(pipe()).toBeInstanceOf(Function);
+    expect(pipe(5)).toBeInstanceOf(Function);
   });
 
   it("should throw an error if one of the provided arguments is not a function", () => {
-    expect(() => flow(1)).toThrow();
-    expect(() => flow("func")).toThrow();
-    expect(() => flow()).not.toThrow();
+    expect(() => pipe(1)(1)).toThrow();
+    expect(() => pipe(1)("func")).toThrow();
+    expect(() => pipe(1)()).not.toThrow();
   });
 
   it("should return the identity function when no functions are provided", () => {
     const value = { a: 5 };
-    const composed = flow();
+    const piped = pipe(value)();
 
-    expect(composed(value)).toBe(value);
+    expect(piped).toBe(value);
   });
 
   it("should call all functions exactly once", () => {
@@ -27,16 +27,9 @@ describe("flow", () => {
       jest.fn().mockImplementation(x => x),
       jest.fn().mockImplementation(x => x),
     ];
+    const piped = pipe(value)(...funcs);
 
-    const composed = flow(...funcs);
-
-    funcs.forEach(func => {
-      expect(func).toHaveBeenCalledTimes(0);
-    });
-
-    const result = composed(value);
-
-    expect(result).toBe(value);
+    expect(piped).toBe(value);
 
     funcs.forEach(func => {
       expect(func).toHaveBeenCalledTimes(1);
@@ -49,10 +42,9 @@ describe("flow", () => {
       jest.fn().mockImplementation(x => x + 2),
       jest.fn().mockImplementation(x => x + 3),
     ];
-    const composed = flow(...funcs);
-    const result = composed(10);
+    const piped = pipe(10)(...funcs);
 
-    expect(result).toBe(16);
+    expect(piped).toBe(16);
 
     expect(funcs[0]).toHaveBeenLastCalledWith(10);
     expect(funcs[1]).toHaveBeenLastCalledWith(11);
