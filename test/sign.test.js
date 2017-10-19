@@ -5,7 +5,7 @@ describe("sign", () => {
     expect(sign(-123)).toBe(-1);
   });
 
-  test("Sign of a postive number should be 1", () => {
+  test("Sign of a positive number should be 1", () => {
     expect(sign(123)).toBe(1);
   });
 
