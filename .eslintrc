@@ -5,8 +5,9 @@
   },
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "es6": true,
+    "jest": true,
+    "node": true
   },
   "rules": {
     "camelcase": ["error", { "properties": "always" }],
@@ -15,10 +16,11 @@
     "no-console": "error",
     "no-debugger": "error",
     "no-multi-spaces": "error",
-    "no-whitespace-before-property": "error",
     "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-whitespace-before-property": "error",
+    "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "space-infix-ops": ["error", {"int32Hint": false}],
-    "quotes": ["error", "double"]
+    "space-infix-ops": ["error", {"int32Hint": false}]
   }
 }
