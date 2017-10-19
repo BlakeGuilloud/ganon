@@ -106,15 +106,18 @@ We will need to accompany this method with a test(s) to ensure it returns the pr
 ```javascript
 // test/difference.test.js
 
-const { difference } = require('./lib');
+const { difference } = require("../lib");
 
-test('subtracts 1 - 3 to equal -2', () => {
-  expect(difference(1, 3)).toBe(-2);
+describe("difference", () => {
+  test("subtracts 1 - 3 to equal -2", () => {
+    expect(difference(1, 3)).toBe(-2);
+  });
+
+  test("subtracts 10 - 3 to equal 7", () => {
+    expect(difference(10, 3)).toBe(7);
+  });
 });
 
-test('subtracts 10 - 3 to equal 7', () => {
-  expect(difference(10, 3)).toBe(7);
-});
 ```
 
 Now that we have fixed a method, written the skeleton of a new method, and a test to accompany it, we can push up our changes and open a pull request. :fire: :fire: :fire:
