@@ -1,4 +1,4 @@
-const { cubeRoot } = require('../lib');
+const { cubeRoot } = require("../lib");
 
 test('cube root of 27 to equal 3', () => {
   expect(squareRoot(27)).toBe(3);
