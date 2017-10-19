@@ -1,31 +1,31 @@
-const { combinations } = require('../lib');
+const { combinations } = require("../lib");
 
-describe('combinations', () => {
-  it('should throw when the first argument is not an array', () => {
+describe("combinations", () => {
+  it("should throw when the first argument is not an array", () => {
     expect(() => combinations()).toThrow();
     expect(() => combinations(5)).toThrow();
   });
 
-  it('should throw when the second argument is not a positive number', () => {
+  it("should throw when the second argument is not a positive number", () => {
     expect(() => combinations([])).toThrow();
-    expect(() => combinations([], 'a')).toThrow();
+    expect(() => combinations([], "a")).toThrow();
     expect(() => combinations([], -1)).toThrow();
     expect(() => combinations([], 1)).not.toThrow();
   });
 
-  it('should return an empty array when an empty array is supplied or n is zero', () => {
+  it("should return an empty array when an empty array is supplied or n is zero", () => {
     expect(combinations([], 1)).toEqual([]);
     expect(combinations([1], 0)).toEqual([]);
   });
 
-  it('should return array with arrays for each item in the list when n is one', () => {
+  it("should return array with arrays for each item in the list when n is one", () => {
     const array = [1, 2, 3];
     const result = combinations(array, 1);
 
     array.forEach(i => expect(result).toContainEqual([i]));
   });
 
-  it('should return all combinations when given an array and a number', () => {
+  it("should return all combinations when given an array and a number", () => {
     const cases = [
       {
         input: [[1, 2, 3], 2],
@@ -47,4 +47,4 @@ describe('combinations', () => {
       });
     });
   });
-})
+});
