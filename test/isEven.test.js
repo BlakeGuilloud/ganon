@@ -1,4 +1,4 @@
-const { isEven } = require("../lib");
+const isEven = require("../lib/isEven");
 
 test("10 is even", () => {
   expect(isEven(10)).toBe(true);

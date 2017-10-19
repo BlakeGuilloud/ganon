@@ -1,4 +1,4 @@
-const { and } = require("../lib");
+const and = require("../lib/and");
 
 test("true and true returns true", () => {
   expect(and(true, true)).toBe(true);
