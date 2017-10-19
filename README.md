@@ -32,3 +32,91 @@ All tests will live in the `test` directory. A test file should be formatted `[m
 
 ### Contributing
 Please read our [Contributing Guide](https://github.com/BlakeGuilloud/ganon/blob/master/CONTRIBUTING.md) for information on how to contribute to this project! All skill levels are more than welcome to participate in this project!
+
+### Demo
+We're going to walk through the process of taking on an issue, resolving it, writing a new issue, and shipping some code.
+
+The method we are going to resolve is called `sum`:
+
+```javascript
+// lib/sum.js
+
+function sum(a, b) {
+  // Your code goes here.
+}
+
+module.exports = sum;
+```
+
+In order to test this method, we will first run `yarn test sum`:
+
+```bash
+$ yarn test sum
+
+  FAIL  problems/sum.test.js
+    ✕ adds 1 + 2 to equal 3 (8ms)
+    ✕ adds 3 + 4 to equal 7 (1ms)
+
+    ● adds 1 + 2 to equal 3
+
+      expect(received).toBe(expected)
+
+      Expected value to be (using ===):
+        3
+      Received:
+        undefined
+```
+
+As you can see, there is something wrong with the function sum, so let's resolve it:
+
+```javascript
+// lib/sum.js
+
+function sum(a, b) {
+  return a + b;
+}
+
+module.exports = sum;
+```
+
+Run the test again:
+
+```bash
+$ yarn test sum
+  
+  PASS  problems/sum.test.js
+    ✓ adds 1 + 2 to equal 3 (6ms)
+    ✓ adds 3 + 4 to equal 7 (1ms)
+```
+
+Now that I have fixed the sum function to return the desired value, I need to write the skeleton of a new method for other contributors to work on. Let's write one called `difference`:
+
+```javascript
+// lib/difference.js
+
+// Write a function that returns the difference of the first two parameters
+
+function difference(a, b) {
+  // Your code goes here.
+}
+
+module.exports = difference;
+```
+
+We will need to accompany this method with a test(s) to ensure it returns the proper value:
+
+```javascript
+// test/difference.test.js
+
+const { difference } = require('./lib');
+
+test('subtracts 1 - 3 to equal -2', () => {
+  expect(difference(1, 3)).toBe(-2);
+});
+
+test('subtracts 10 - 3 to equal 7', () => {
+  expect(difference(10, 3)).toBe(7);
+});
+```
+
+Now that we have fixed a method, written the skeleton of a new method, and a test to accompany it, we can push up our changes and open a pull request. :fire: :fire: :fire:
