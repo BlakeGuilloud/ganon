@@ -2,7 +2,7 @@
   "name": "ganon",
   "version": "2.0.10",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:BlakeGuilloud/ganon.git",
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
   "license": "MIT",
