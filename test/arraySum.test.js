@@ -8,4 +8,8 @@ describe("arraySum", () => {
   test("adds 3 + 0 + 4 to equal 7", () => {
     expect(arraySum([3, "test", 0, 4])).toBe(7);
   });
+
+  test("returns -1 if empty array", () => {
+    expect(arraySum([])).toBe(-1);
+  });
 });
