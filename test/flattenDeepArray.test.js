@@ -6,9 +6,9 @@ describe("flattenDeepArray", () => {
   });
 
   test("flattenDeepArray on non-array type to throw an error", () => {
-    expect(flattenDeepArray({a: 1, b: 2})).toThrow();
-    expect(flattenDeepArray("I am a banana")).toThrow();
-    expect(flattenDeepArray(4)).toThrow();
+    expect(() => flattenDeepArray({a: 1, b: 2})).toThrow();
+    expect(() => flattenDeepArray("I am a banana")).toThrow();
+    expect(() => flattenDeepArray(4)).toThrow();
   });
 
   test("flattenDeepArray on already flat array returns the same array", () => {
