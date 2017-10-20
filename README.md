@@ -1,4 +1,8 @@
-![Ganon](/logo/ganon_version_2.png?raw=true "Ganon")
+<!-- ![Ganon](/logo/ganon_version_2.png?raw=true "Ganon") -->
+
+<p align="center">
+  <img alt="Logo" src="./logo/ganon_version_2.png" />
+</p>
 
 **Ganon** is a functional javascript library designed and built by open source contributors.
 
