@@ -6,10 +6,10 @@ describe("regexReplace", () => {
   });
 
   test("regexReplace('foobarfoobar') should return 'testbarfoobar'", () => {
-    expect(regexReplace("foobar", "foo", "test")).toEqual("testbarfoobar");
+    expect(regexReplace("foobarfoobar", "foo", "test")).toEqual("testbarfoobar");
   });
 
   test("regexReplace('foobarfoobar') should return 'testbartestbar'", () => {
-    expect(regexReplace("foobar", "foo", "test", 1)).toEqual("testbartestbar");
+    expect(regexReplace("foobarfoobar", "foo", "test", 1)).toEqual("testbartestbar");
   });
 });
