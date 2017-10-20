@@ -1,8 +1,25 @@
-![Ganon](/logo/ganon_version_2.png?raw=true "Ganon")
+<!-- ![Ganon](/logo/ganon_version_2.png?raw=true "Ganon") -->
 
-**Ganon** is a functional javascript library designed and built by open source contributors.
+<p align="center">
+  <img alt="Logo" src="./logo/ganon_version_2.png" />
+</p>
 
-[![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
+<p align="center">
+  <b>Ganon</b> is a functional javascript library designed and built by open source contributors.
+  <br />
+  <br />
+  <a href="https://travis-ci.org/BlakeGuilloud/ganon">
+    <img alt="Build Status" src="https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master" />
+  </a>
+    <a href="https://www.npmjs.com/package/ganon">
+      <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
+    </a>
+    <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
+      <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
+    </a>
+</p>
+
+<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE) -->
 
 ### A HUGE THANKS!!
 A very special thanks to [@csleong98](https://github.com/csleong98) for designing this logo!
