@@ -3,6 +3,7 @@ const { convertMileToKilometer } = require("../lib");
 describe("convertMileToKilometer", () => {
   test("1 mile is 1.609344 kilometers", () => {
     expect(convertMileToKilometer(1)).toBeCloseTo(1.609344, 4);
+    expect(convertMileToKilometer(15.42)).toBeCloseTo(24.816084, 4);
     expect(convertMileToKilometer(22)).toBeCloseTo(35.405568, 4);
     expect(convertMileToKilometer(532)).toBeCloseTo(856.171008, 4);
   });
