@@ -1,12 +1,33 @@
-## A pull request will most likely be denied if it does not contain a skeleton method for someone else to work on!
+<p align="center">
+  <img alt="Logo" src="./logo/ganon_version_2.png" />
+</p>
 
-## Ganon
-A functional javascript library designed and built by open source contributors.
+<p align="center">
+  <b>Ganon</b> is a functional javascript library designed and built by open source contributors.
+  <br />
+  <br />
+  <a href="https://travis-ci.org/BlakeGuilloud/ganon">
+    <img alt="Build Status" src="https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master" />
+  </a>
+    <a href="https://www.npmjs.com/package/ganon">
+      <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
+    </a>
+    <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
+      <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
+    </a>
+</p>
 
-The project as it stands is extremely barebones and will eventually need some production minification techniques in place, as well as proper compilers for use in all versions of javascript, but for now, let's build some methods!
+<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE) -->
 
-[![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
 
+<br />
+
+### A HUGE THANKS!!
+A very special thanks to [@csleong98](https://github.com/csleong98) for designing our logo!
+
+Huge props to [@andreasgruenh](https://github.com/andreasgruenh) and [@ktilcu](https://github.com/ktilcu) for helping collaborate.
+
+And the biggest of credit goes to all of our awesome [Contributors](https://github.com/BlakeGuilloud/ganon/graphs/contributors)!!
 
 ### Usage
 ```bash
@@ -25,33 +46,15 @@ To build a suite of javascript methods by the time [hacktoberfest](https://hackt
 
 Ganon is designed to get as many people involved as possible, so our objective here is to fix or improve an existing method and then write the skeleton of a desired method for someone else to build. In the spirit of getting everyone involved, please only fix one or two methods and make sure to push up something for someone else to work on!
 
+This project was created to have fun.
+
 ### Project Structure
 All methods will live in the `lib` directory of the project. They should be written as [methodName].js, required and exported in `lib/index.js`.
 
 All tests will live in the `test` directory. A test file should be formatted `[methodName].test.js` to reflect what method is being tested.
 
 ### Contributing
-1. Fork this repo
-2. Clone the fork
-3. Fix a method
-4. Write the skeleton of a new method
-5. Push to your fork
-6. Open a pull request in this repo!
-7. Be totally rad if your pull request gets merged in and create a new Issue for the skeleton you built!
-8. Star this repository to keep up with it's progress!
-
-If you see an issue that you wish to work on please @mention me (@BlakeGuilloud), and I will apply the "in progress" label to the issue.
-
-Please try to avoid working on issues that are "in progress", as we want to give anyone who wishes to contribute enough time to complete the issue.
-
-If you think of any other methods that this project should have, please feel free to make a pull request! But for each method you resolve, make sure to add one for someone else to work on!
-
-### Development
-While building new features, we are utilizing the [Jest](https://github.com/facebook/jest) testing framework for writing all of our unit tests.
-
-In order to test a method, simply run `yarn test [methodName]`. I.E. `yarn test sum`.
-
-You should notice several errors in the console for an unfinished method. Fix the method to make the test pass, and write a new combination of an unfinished method + test to accompany it!
+Please read our [Contributing Guide](https://github.com/BlakeGuilloud/ganon/blob/master/CONTRIBUTING.md) for information on how to contribute to this project! All skill levels are more than welcome to participate in this project!
 
 ### Demo
 We're going to walk through the process of taking on an issue, resolving it, writing a new issue, and shipping some code.
@@ -62,7 +65,7 @@ The method we are going to resolve is called `sum`:
 // lib/sum.js
 
 function sum(a, b) {
-  // Your code goes here.
+// Your code goes here.
 }
 
 module.exports = sum;
@@ -117,7 +120,7 @@ Now that I have fixed the sum function to return the desired value, I need to wr
 // Write a function that returns the difference of the first two parameters
 
 function difference(a, b) {
-  // Your code goes here.
+// Your code goes here.
 }
 
 module.exports = difference;
@@ -128,15 +131,18 @@ We will need to accompany this method with a test(s) to ensure it returns the pr
 ```javascript
 // test/difference.test.js
 
-const { difference } = require('./lib');
+const { difference } = require("../lib");
 
-test('subtracts 1 - 3 to equal -2', () => {
-  expect(difference(1, 3)).toBe(-2);
+describe("difference", () => {
+  test("subtracts 1 - 3 to equal -2", () => {
+    expect(difference(1, 3)).toBe(-2);
+  });
+
+  test("subtracts 10 - 3 to equal 7", () => {
+    expect(difference(10, 3)).toBe(7);
+  });
 });
 
-test('subtracts 10 - 3 to equal 7', () => {
-  expect(difference(10, 3)).toBe(7);
-});
 ```
 
-Now that we have fixed a method, written the skeleton of a new method, and a test to accompany it, we can push up our changes and open a pull request. :fire:
+Now that we have fixed a method, written the skeleton of a new method, and a test to accompany it, we can push up our changes and open a pull request. :fire: :fire: :fire:
