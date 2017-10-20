@@ -1,8 +1,28 @@
-## Ganon
-A functional javascript library designed and built by open source contributors.
+<!-- ![Ganon](/logo/ganon_version_2.png?raw=true "Ganon") -->
 
-[![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
+<p align="center">
+  <img alt="Logo" src="./logo/ganon_version_2.png" />
+</p>
 
+<p align="center">
+  <b>Ganon</b> is a functional javascript library designed and built by open source contributors.
+  <br />
+  <br />
+  <a href="https://travis-ci.org/BlakeGuilloud/ganon">
+    <img alt="Build Status" src="https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master" />
+  </a>
+    <a href="https://www.npmjs.com/package/ganon">
+      <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
+    </a>
+    <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
+      <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
+    </a>
+</p>
+
+<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE) -->
+
+### A HUGE THANKS!!
+A very special thanks to [@csleong98](https://github.com/csleong98) for designing this logo!
 
 ### Usage
 ```bash
@@ -106,15 +126,18 @@ We will need to accompany this method with a test(s) to ensure it returns the pr
 ```javascript
 // test/difference.test.js
 
-const { difference } = require('./lib');
+const { difference } = require("../lib");
 
-test('subtracts 1 - 3 to equal -2', () => {
-  expect(difference(1, 3)).toBe(-2);
+describe("difference", () => {
+  test("subtracts 1 - 3 to equal -2", () => {
+    expect(difference(1, 3)).toBe(-2);
+  });
+
+  test("subtracts 10 - 3 to equal 7", () => {
+    expect(difference(10, 3)).toBe(7);
+  });
 });
 
-test('subtracts 10 - 3 to equal 7', () => {
-  expect(difference(10, 3)).toBe(7);
-});
 ```
 
 Now that we have fixed a method, written the skeleton of a new method, and a test to accompany it, we can push up our changes and open a pull request. :fire: :fire: :fire:

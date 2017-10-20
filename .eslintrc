@@ -1,5 +1,6 @@
 {
   "parser": "babel-eslint",
+  "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": 6
   },
@@ -11,6 +12,7 @@
   },
   "rules": {
     "camelcase": ["error", { "properties": "always" }],
+    "no-unused-vars": 0,
     "func-call-spacing": ["error", "never"],
     "indent": ["error", 2],
     "no-console": "error",
@@ -21,6 +23,7 @@
     "no-whitespace-before-property": "error",
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "space-infix-ops": ["error", {"int32Hint": false}]
+    "space-infix-ops": ["error", {"int32Hint": false}],
+    "no-dupe-keys": "error"
   }
 }
