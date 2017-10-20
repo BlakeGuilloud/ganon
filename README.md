@@ -34,8 +34,19 @@ And the biggest of credit goes to all of our awesome [Contributors](https://gith
 $ yarn add ganon
 ```
 
+NodeJS
 ```javascript
+// import { sum } from 'ganon';
 const { sum } = require('ganon');
+
+const sumOfOneAndTwo = sum(1, 2);
+=> 3
+```
+
+Javascript
+```javascript
+// import sum from 'ganon/dist/sum';
+const sum = require('ganon/dist/sum');
 
 const sumOfOneAndTwo = sum(1, 2);
 => 3
