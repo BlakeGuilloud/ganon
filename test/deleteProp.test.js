@@ -17,5 +17,5 @@ describe("deleteProp", () => {
   });
   it("should remove property", () => {
     expect(newObj.name).toBe(undefined);
-  })
+  });
 });
