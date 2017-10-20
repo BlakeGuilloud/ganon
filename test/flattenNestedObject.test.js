@@ -7,6 +7,8 @@ describe("flattenNestedObject", () => {
     expect(() => flattenNestedObject()).toThrow();
     expect(() => flattenNestedObject(4)).toThrow();
     expect(() => flattenNestedObject("apple")).toThrow();
+    expect(() => flattenNestedObject([1,2,3])).toThrow();
+    expect(() => flattenNestedObject(() => "whatever")).toThrow();
 
   });
 
@@ -19,7 +21,7 @@ describe("flattenNestedObject", () => {
 
   });
 
-  it("should return the flatten object of the passed nested object parameter with default delimiter(.)", () => {
+  it("should return the flattened object of the passed nested object parameter with default delimiter(.)", () => {
 
     const parameterInput1 = { a : 1, b : "banana", c : { d : [1, 2, 3] } },
       output1 = { "a" : 1, "b" : "banana", "c.d" : [1, 2, 3] },
