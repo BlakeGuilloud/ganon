@@ -6,7 +6,7 @@ A functional javascript library designed and built by open source contributors.
 [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
 
 ### A HUGE THANKS!!
-A very special thanks to @csleong98 for designing this logo!
+A very special thanks to [@csleong98](https://github.com/csleong98) for designing this logo!
 
 ### Usage
 ```bash
