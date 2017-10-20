@@ -18,7 +18,7 @@ Thank you for contributing to Ganon! We thrilled to have developers of all level
 ### Resolving an Issue
   * Find the method you wish to resolve- the file will live in `lib/[methodName].js`.
   * Fix the method.
-  * Run a test on the method: `yarn test [methodName]`. If the tests pass, awesome job!
+  * Run a test on the method: `yarn test [methodName]` or `yarn test:watch [methodName]` to run tests on every file save. If the tests pass, awesome job!
   * Look over the method's test file in `test/[methodName].test.js` to make sure there are no potential edge cases that were not considered when the tests were conceived.
 
 ### Creating a Skeleton Method
