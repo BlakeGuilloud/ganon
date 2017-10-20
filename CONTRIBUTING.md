@@ -25,7 +25,6 @@ This is THE most important step in the [Ganon Objective](https://github.com/Blak
   * Come up with a method that you would like to see implemented into the project.
   * Create a new file in the `lib` directory called `[methodName].js`.
   * Write the skeleton of your method, leaving the business logic for someone else!
-  * Update the `lib/index.js` to require your method and export your newly created skeleton method!
   * Create a new file in the `test` directory called `[methodName].test.js`.
   * Write a few tests to describe your skeleton method using the [Jest Framework](http://facebook.github.io/jest/).
 
