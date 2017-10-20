@@ -28,7 +28,7 @@ describe("flattenNestedObject", () => {
       parameterInput2 = { "a" : 1, "b" : { "c" : { "d" : { "e" : 1, "f" : 2 } } } },
       output2 = {"a": 1, "b.c.d.e": 1, "b.c.d.f": 2};
 
-    // expect(flattenNestedObject(parameterInput1)).toEqual(output1);
+    expect(flattenNestedObject(parameterInput1)).toEqual(output1);
     expect(flattenNestedObject(parameterInput2)).toEqual(output2);
   });
 
