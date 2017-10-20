@@ -5,11 +5,11 @@ describe("regexReplace", () => {
     expect(regexReplace("foobar", "foo", "test")).toEqual("testbar");
   });
 
-  test("regexReplace('foobarfoobar') should return 'testbarfoobar'", () => {
+  test("regexReplace('foobarfoobar', 'foo', 'test') should return 'testbarfoobar'", () => {
     expect(regexReplace("foobar", "foo", "test")).toEqual("testbarfoobar");
   });
 
-  test("regexReplace('foobarfoobar') should return 'testbartestbar'", () => {
-    expect(regexReplace("foobar", "foo", "test", 1)).toEqual("testbartestbar");
+  test("regexReplace('foobarfoobar', 'foo', 'test', true) should return 'testbartestbar'", () => {
+    expect(regexReplace("foobar", "foo", "test", true)).toEqual("testbartestbar");
   });
 });
