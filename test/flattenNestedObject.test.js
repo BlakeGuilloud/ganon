@@ -30,7 +30,7 @@ describe("flattenNestedObject", () => {
     expect(flattenNestedObject(parameterInput2)).toEqual(output2);
   });
 
-  it("should return the flatten object of the passed nested object parameter with default delimiter(.)", () => {
+  it("should return the flatten object of the passed nested object parameter with a custom delimiter(-)", () => {
 
     const parameterInput1 = { a : 1, b : "banana", c : { d : [1, 2, 3] } },
       output1 = { "a" : 1, "b" : "banana", "c-d" : [1, 2, 3] },
