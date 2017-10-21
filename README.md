@@ -1,5 +1,3 @@
-<!-- ![Ganon](/logo/ganon_version_2.png?raw=true "Ganon") -->
-
 <p align="center">
   <img alt="Logo" src="./logo/ganon_version_2.png" />
 </p>
@@ -21,16 +19,34 @@
 
 <!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE) -->
 
+
+<br />
+
 ### A HUGE THANKS!!
-A very special thanks to [@csleong98](https://github.com/csleong98) for designing this logo!
+A very special thanks to [@csleong98](https://github.com/csleong98) for designing our logo!
+
+Huge props to [@andreasgruenh](https://github.com/andreasgruenh) and [@ktilcu](https://github.com/ktilcu) for helping collaborate.
+
+And the biggest of credit goes to all of our awesome [Contributors](https://github.com/BlakeGuilloud/ganon/graphs/contributors)!!
 
 ### Usage
 ```bash
 $ yarn add ganon
 ```
 
+NodeJS
 ```javascript
+// import { sum } from 'ganon';
 const { sum } = require('ganon');
+
+const sumOfOneAndTwo = sum(1, 2);
+=> 3
+```
+
+Javascript
+```javascript
+// import sum from 'ganon/dist/sum';
+const sum = require('ganon/dist/sum');
 
 const sumOfOneAndTwo = sum(1, 2);
 => 3
