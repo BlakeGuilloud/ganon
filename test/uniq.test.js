@@ -20,5 +20,6 @@ describe("uniq", () => {
   it("should return a unique array given an array with different items", () => {
     expect(uniq([1,1,2,2,3,3])).toEqual([1,2,3]);
     expect(uniq(["1","1","2","2","3","3"])).toEqual(["1","2","3"]);
+    expect(uniq(["1", 1, "2", "2", 2, 3, "3"])).toEqual(["1", 1, "2", 2, 3, "3"]);
   });
 });
