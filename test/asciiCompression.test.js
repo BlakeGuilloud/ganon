@@ -6,7 +6,7 @@ describe("asciiCompression", () => {
   });
 
   test("asciiCompression of 'aa' to equal 'a2'", () => {
-    expect(asciiCompression("aaa")).toBe("a3");
+    expect(asciiCompression("aa")).toBe("a2");
   });
 
   test("asciiCompression of 'aabb' to equal 'a2b2'", () => {
