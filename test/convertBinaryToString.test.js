@@ -5,10 +5,24 @@ const BINARY_STRING = "001000000100110101100001011110010010000001110100" +
 const EMPTY_STRING = "00100000";
 const STRING_NUMBERS = "0011000100110010001100110011010000110101011000010111001101100100";
 
-describe("Convert binary to string", () => {
-  test("Any given binary input should produce given text output", () => {
+describe("convertBinaryToString", () => {
+  it("should have a string input", () => {
+    expect(convertBinaryToString()).toBeUndefined();
+    expect(convertBinaryToString({})).toBeUndefined();
+    expect(convertBinaryToString([])).toBeUndefined();
+    expect(convertBinaryToString(true)).toBeUndefined();
+    expect(convertBinaryToString(() => {})).toBeUndefined();
+  });
+
+  it("should return \" May the force be with you\"", () => {
     expect(convertBinaryToString(BINARY_STRING)).toBe(" May the force be with you");
-    expect(convertBinaryToString(EMPTY_STRING).toBe(" "));
+  });
+
+  it("should return a whitespace character", () => {
+    expect(convertBinaryToString(EMPTY_STRING)).toBe(" ");
+  });
+
+  it("should return \"12345asd\"", () => {
     expect(convertBinaryToString(STRING_NUMBERS)).toBe("12345asd");
   });
 });
