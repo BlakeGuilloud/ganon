@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>Ganon</b> is a functional javascript library designed and built by open source contributors.
+  Ganon is a functional javascript library designed and maintained by open source contributors.
   <br />
   <br />
   <a href="https://travis-ci.org/BlakeGuilloud/ganon">
