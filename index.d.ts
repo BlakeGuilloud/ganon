@@ -43,6 +43,7 @@ export declare function removeLast(a: string[]): void;
 export declare function reverse<T>(value: T): void;
 export declare function rot13(value: string): void;
 export declare function round(a: number): void;
+export declare function secondLargest(a: number[]): void;
 export declare function sign(a: number): void;
 export declare function square(a: number): void;
 export declare function squareRoot(a: number): void;
