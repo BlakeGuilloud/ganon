@@ -1,6 +1,6 @@
 {
   "name": "ganon",
-  "version": "2.0.15",
+  "version": "2.0.17",
   "main": "dist/index.js",
   "types": "index.d.ts",
   "repository": "git@github.com:BlakeGuilloud/ganon.git",
@@ -25,6 +25,7 @@
     "build": "babel lib --out-dir dist",
     "fix": "eslint ./lib ./test --fix",
     "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint --no-eslintrc -c .eslintrc ./lib ./test",
     "prepublish": "npm run clean && npm run build"
   },
