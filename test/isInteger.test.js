@@ -1,31 +1,29 @@
 const { isInteger } = require("../lib");
 
 describe("isInteger", () => {
-  test("Number 1 is an integer", () => {
-    expect(isInteger(1)).toBe(true);
-  });
-
-  test("Number 100 is an integer", () => {
-    expect(isInteger(100)).toBe(true);
-  });
-
-  test("Number -10000 is an integer", () => {
-    expect(isInteger(-10000)).toBe(true);
-  });
-
-  test("Number 0.77 is an integer", () => {
+  it("should fail for decimal numbers", () => {
     expect(isInteger(0.77)).toBe(false);
+    expect(isInteger(0.0001)).toBe(false);
+    expect(isInteger(-12.888)).toBe(false);
   });
 
-  test("Number 4/2 is an integer", () => {
-    expect(isInteger(4 / 2)).toBe(true);
-  });
-
-  test("Array [] is an integer", () => {
+  it("should fail for non numbers", () => {
     expect(isInteger([])).toBe(false);
+    expect(isInteger("bingBangBaz")).toBe(false);
+    expect(isInteger({})).toBe(false);
   });
 
-  test("String bingBangBaz is an integer", () => {
-    expect(isInteger("bingBangBaz")).toBe(false);
+  it("should pass for all whole numbers and negative counterparts", () => {
+    expect(isInteger(0)).toBe(true);
+    expect(isInteger(1)).toBe(true);
+    expect(isInteger(100)).toBe(true);
+    expect(isInteger(-10000)).toBe(true);
+    expect(isInteger(-1)).toBe(true);
+  });
+
+  it("should pass for integer-returning expressions", () => {
+    expect(isInteger(4 / 2)).toBe(true);
+    expect(isInteger(7 + 1)).toBe(true);
+    expect(isInteger(12 - 10000)).toBe(true);
   });
 });
