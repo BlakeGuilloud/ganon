@@ -1,6 +1,6 @@
 const { distance } = require("../lib");
 
-describe("ASCIIToString", () => {
+describe("measures the distance between two points", () => {
   test("distance between 0,0 and 1,1", () => {
     expect(distance({ x: 0, y: 0}, { x: 1, y: 1})).toBe(1.41);
   });
