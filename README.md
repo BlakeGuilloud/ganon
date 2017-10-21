@@ -1,36 +1,57 @@
-<!-- ![Ganon](/logo/ganon_version_2.png?raw=true "Ganon") -->
-
 <p align="center">
   <img alt="Logo" src="./logo/ganon_version_2.png" />
 </p>
 
 <p align="center">
-  <b>Ganon</b> is a functional javascript library designed and built by open source contributors.
+  Ganon is a functional javascript library designed and maintained by open source contributors.
   <br />
   <br />
   <a href="https://travis-ci.org/BlakeGuilloud/ganon">
     <img alt="Build Status" src="https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master" />
   </a>
-    <a href="https://www.npmjs.com/package/ganon">
-      <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
-    </a>
-    <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
-      <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
-    </a>
+  <a href="https://www.npmjs.com/package/ganon">
+    <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
+  </a>
+  <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
+    <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
+  </a>
+  <a href="https://www.npmjs.org/package/ganon">
+    <img alt="Downloads" src="http://img.shields.io/npm/dt/ganon.svg" />
+  </a>
 </p>
 
-<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE) -->
+<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
+[![npm module downloads](http://img.shields.io/npm/dt/ganon.svg)](https://www.npmjs.org/package/ganon)
+-->
+
+
+<br />
 
 ### A HUGE THANKS!!
-A very special thanks to [@csleong98](https://github.com/csleong98) for designing this logo!
+A very special thanks to [@csleong98](https://github.com/csleong98) for designing our logo!
+
+Huge props to [@andreasgruenh](https://github.com/andreasgruenh) and [@ktilcu](https://github.com/ktilcu) for helping collaborate.
+
+And the biggest of credit goes to all of our awesome [Contributors](https://github.com/BlakeGuilloud/ganon/graphs/contributors)!!
 
 ### Usage
 ```bash
 $ yarn add ganon
 ```
 
+NodeJS
 ```javascript
+// import { sum } from 'ganon';
 const { sum } = require('ganon');
+
+const sumOfOneAndTwo = sum(1, 2);
+=> 3
+```
+
+Javascript
+```javascript
+// import sum from 'ganon/dist/sum';
+const sum = require('ganon/dist/sum');
 
 const sumOfOneAndTwo = sum(1, 2);
 => 3
