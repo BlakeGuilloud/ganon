@@ -9,15 +9,20 @@
   <a href="https://travis-ci.org/BlakeGuilloud/ganon">
     <img alt="Build Status" src="https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master" />
   </a>
-    <a href="https://www.npmjs.com/package/ganon">
-      <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
-    </a>
-    <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
-      <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
-    </a>
+  <a href="https://www.npmjs.com/package/ganon">
+    <img alt="npm" src="https://img.shields.io/npm/v/ganon.svg" />
+  </a>
+  <a href="https://github.com/BlakeGuilloud/ganon/blob/master/LICENS">
+    <img alt="License" src="https://img.shields.io/npm/l/ganon.svg" />
+  </a>
+  <a href="https://www.npmjs.org/package/ganon">
+    <img alt="Downloads" src="http://img.shields.io/npm/dt/ganon.svg" />
+  </a>
 </p>
 
-<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE) -->
+<!-- [![Build Status](https://travis-ci.org/BlakeGuilloud/ganon.svg?branch=master)](https://travis-ci.org/BlakeGuilloud/ganon) [![NPM version](https://img.shields.io/npm/v/ganon.svg)](https://www.npmjs.com/package/ganon) [![License](https://img.shields.io/npm/l/ganon.svg)](https://github.com/BlakeGuilloud/ganon/blob/master/LICENSE)
+[![npm module downloads](http://img.shields.io/npm/dt/ganon.svg)](https://www.npmjs.org/package/ganon)
+-->
 
 
 <br />
