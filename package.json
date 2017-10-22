@@ -31,5 +31,8 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "dependencies": {
+    "yarn": "^1.2.1"
+  }
 }
