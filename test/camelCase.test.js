@@ -12,4 +12,8 @@ describe("camelCase", () => {
   test("YET ANOTHER STRING WITH YET MORE WORDS", () => {
     expect(camelCase("YET ANOTHER STRING WITH YET MORE WORDS")).toBe("yetAnotherStringWithYetMoreWords");
   });
+
+  test("A string with a 1 in it", () => {
+    expect(camelCase("A string with a 1 in it")).toBe("aStringWithA1InIt");
+  });
 });
