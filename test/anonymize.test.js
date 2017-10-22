@@ -18,4 +18,8 @@ describe("anonymize", () => {
     expect(anonymize("John Smith Doe")).toBe("J*** S**** D**");
   });
 
+  test("anonymize middle name", () => {
+    expect(anonymize("John Smith McDoe")).toBe("J*** S**** M****");
+  });
+
 });
