@@ -5,7 +5,7 @@ Thank you for contributing to Ganon! We thrilled to have developers of all level
 ### Getting Started
   * Make sure you have [NodeJS](https://nodejs.org/) installed.
   * Make sure you have [Yarn](https://yarnpkg.com/) installed. While you are welcome to use npm for package management, the package-lock.json file is intentionally gitignored in favor of yarn.
-  * Fork the repository on GitHub.
+  * Fork and Star the repository on GitHub.
   * Run the command `yarn install` at the root of your local `ganon/` directory to install dependencies.
 
 ### Claiming an Issue
