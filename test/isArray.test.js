@@ -1,19 +1,35 @@
 const { isArray } = require("../lib");
 
 describe("isArray", () => {
-  test("isArray returns true for an array", () => {
-    expect(isArray([1, 2, 3])).toBe(true);
+  test("returns true for an empty array", () => {
+    expect(isArray([])).toEqual(true);
   });
 
-  test("isArray returns true for an empty object", () => {
-    expect(isArray([])).toBe(true);
+  test("returns true for a multi type array", () => {
+    expect(isArray([1, "2", {}, null])).toEqual(true);
   });
 
-  test("isArray returns false for an object", () => {
-    expect(isArray({ name: "john" })).toBe(false);
+  test("returns false for a number", () => {
+    expect(isArray(1)).toEqual(false);
   });
 
-  test("isArray returns false for a string", () => {
-    expect(isArray("hello")).toBe(false);
+  test("returns false for a string", () => {
+    expect(isArray("1")).toEqual(false);
+  });
+
+  test("returns false for an object", () => {
+    expect(isArray({})).toEqual(false);
+    expect(isArray({ "0": [], "1": [] })).toEqual(false);
+  });
+
+  test("returns true for an Array subclass", () => {
+    class SubArray extends Array {
+      constructor(...args) {
+        super(...args);
+      }
+    }
+
+    const subArray = new SubArray(1, 2, 3);
+    expect(isArray(subArray)).toEqual(true);
   });
 });
