@@ -13,5 +13,6 @@ describe("isString", () => {
     expect(isString({0: "123"})).toEqual(false);
     expect(isString(null)).toEqual(false);
     expect(isString(undefined)).toEqual(false);
+    expect(isString()).toEqual(false);
   });
 });
