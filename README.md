@@ -60,7 +60,7 @@ const sumOfOneAndTwo = sum(1, 2);
 ### Objective
 To build a suite of javascript methods by the time [hacktoberfest](https://hacktoberfest.digitalocean.com/) ends! Let's get some T-shirts!!
 
-Ganon is designed to get as many people involved as possible, so our objective here is to fix or improve an existing method and then write the skeleton of a desired method for someone else to build. In the spirit of getting everyone involved, please only fix one or two methods and make sure to push up something for someone else to work on!
+Ganon is designed to get as many people involved as possible, so our objective here is to fix or improve an existing method and then write the skeleton of a desired method for someone else to build. In the spirit of getting everyone involved, please only fix one or two methods at a time and make sure to push up something for someone else to work on!
 
 This project was created to have fun.
 
