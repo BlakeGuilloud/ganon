@@ -1,19 +1,19 @@
 const { countAlphabets } = require("../lib");
 
 describe("countAlphabets", () => {
-  test("countAlphabets should return correct count of alphabets", () => {
-    expect(countAlphabets("a")).toBe("a1");
+  test("countAlphabets should return 'a:3'", () => {
+    expect(countAlphabets("aaa")).toBe("a:3");
   });
 
-  test("countAlphabets of 'aaa' to equal 'a3'", () => {
-    expect(countAlphabets("aaa")).toBe("a3");
+  test("countAlphabets should return 'a:1,p:2,e:1'", () => {
+    expect(countAlphabets("apple")).toBe("a:1,p:2,e:1");
   });
 
-  test("countAlphabets of 'aabb' to equal 'a2b2'", () => {
-    expect(countAlphabets("aabb")).toBe("a2b2");
+  test("countAlphabets of 'doodad' should return 'd:3,o:2,a:1'", () => {
+    expect(countAlphabets("doodad")).toBe("d:3,o:2,a:1");
   });
 
-  test("countAlphabets of 'acabb' to equal 'a2c1b2'", () => {
-    expect(countAlphabets("acabb")).toBe("a2c1b2");
+  test("countAlphabets of 'apple pie' should return 'a:1,p:3,l:1,e:2,i:1'", () => {
+    expect(countAlphabets("apple pie")).toBe("a:1,p:3,l:1,e:2,i:1");
   });
 });
