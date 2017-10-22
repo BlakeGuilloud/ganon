@@ -13,10 +13,10 @@ describe("random", () => {
     }
   });
 
-  test("should pass a chi-squared test", () => {
+  test("should be uniformely distributed (determined by a chi-squared test with alpha=0.01)", () => {
     const numberOfObservations = 10000;
     const numberOfBins = 10;
-    const criticalValue = 16.919; // https://www.medcalc.org/manual/chi-square-table.php
+    const criticalValue = 21.666; // https://www.medcalc.org/manual/chi-square-table.php
 
     // arrange
     const observations = [];
