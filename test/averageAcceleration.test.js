@@ -17,7 +17,7 @@ describe("averageAcceleration", () => {
     expect(averageAcceleration(85,125,0,15)).toBeCloseTo(2.66667);
   });
 
-  test("The average acceleration with initial velocity 2345 m/s, final velocity 5678 m/s, initial time 123 seconds, final time 456 seconds to equal 10.00901 m/s^2", () => {
+  test("The average acceleration with initial velocity 2345 m/s,final velocity 5678 m/s, initial time 123 seconds, final time 456 seconds to equal 10.00901 m/s^2", () => {
     expect(averageAcceleration(2345,5678,234,456)).toBeCloseTo(10.00901);
   });
 });
