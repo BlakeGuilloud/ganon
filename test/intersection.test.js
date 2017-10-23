@@ -9,7 +9,7 @@ describe("intersection", () => {
   });
 
   test("it should return correctly for two arrays that share elements", () => {
-    expect(intersection(testArr, testArr2)).toEqual([1, 2, 3, 4]);
+    expect(intersection(testArr, testArr2)).toEqual(expect.arrayContaining([1, 2, 3, 4]));
   });
 
   test("it should return an empty array if no elements occur in both arrays", () => {

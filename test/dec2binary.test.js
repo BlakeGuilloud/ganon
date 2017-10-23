@@ -32,4 +32,19 @@ describe("dec2binary", () => {
   test("binary representation of 67108864 is '100000000000000000000000000'", () => {
     expect(dec2binary(67108864)).toBe("100000000000000000000000000");
   });
+
+  test("Any 32-bit signed binary integer should be supported", () => {
+    expect(dec2binary(2147483647)).toBe("1111111111111111111111111111111");
+  });
+
+  test("Should only throw an Error if input is not a double-precision 64-bit floating point format (IEEE 754).", () => {
+    expect(dec2binary.bind(null,"3")).toThrowError(RangeError);
+    expect(dec2binary.bind(null,3.1)).toThrowError(RangeError);
+    expect(dec2binary.bind(null,NaN)).toThrowError(RangeError);
+    expect(dec2binary.bind(null,Infinity)).toThrowError(RangeError);
+    expect(dec2binary.bind(null,Math.pow(2, 53))).toThrowError(RangeError);
+    expect(dec2binary.bind(null,3)).not.toThrowError(RangeError);
+    expect(dec2binary.bind(null,3.0)).not.toThrowError(RangeError);
+    expect(dec2binary.bind(null,Math.pow(2, 53) - 1)).not.toThrowError(RangeError);
+  });
 });
