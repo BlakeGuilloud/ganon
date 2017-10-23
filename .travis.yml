@@ -4,5 +4,4 @@ node_js:
 notifications:
   email: true
 script:
-  - npm run lint
-  # - npm test $(git diff --name-only master...HEAD | cut -f 2 -d "/" | cut -f 1 -d "." | uniq -u)
+  - "npm run lint"
