@@ -1,8 +1,6 @@
 There is currently a method called `<methodName>` that lives in `/lib/<methodName>.js`.
 It is incomplete and needs to be fixed!
 
-<!-- Please include a brief description of this method -->
-
 ### Acceptance Criteria:
 1. Running `yarn test <methodName>` results in tests passing.
 2. You have written a skeleton method for someone else to work on.
