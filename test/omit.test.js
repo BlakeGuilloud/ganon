@@ -6,6 +6,6 @@ describe("omit", () => {
       a: "value",
       b: "value",
       c: "value"
-    }, ["a", "b"])).toBe({c: "value"});
+    }, ["a", "b"])).toEqual({c: "value"});
   });
 });
