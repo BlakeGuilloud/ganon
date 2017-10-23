@@ -5,8 +5,8 @@ describe("convertInchesToFeet", () => {
     expect(convertInchesToFeet(12)).toBe(1);
   });
 
-  test("14 inches is ", () => {
-    expect(convertInchesToFeet(2)).toBe(1.1667);
+  test("14 inches is 1.1667 feet", () => {
+    expect(convertInchesToFeet(14)).toBe(1.1667);
   });
 
   test("0 inches is 0 feet", () => {
