@@ -24,7 +24,7 @@ describe("compact", () => {
   });
 
   test("removes 0 from array", () => {
-    expect(compact([21, 0, 0, 0, 0, 0, 0, 0, 12])).toEqual([21]);
+    expect(compact([21, 0, 0, 0, 0, 0, 0, 0, 12])).toEqual([21, 12]);
   });
 
   test("removes NaN from array", () => {
