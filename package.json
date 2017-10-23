@@ -31,5 +31,8 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "dependencies": {
+    "ganon": "^2.0.19"
+  }
 }
