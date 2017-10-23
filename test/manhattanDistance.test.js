@@ -44,7 +44,7 @@ describe("manhattanDistance", () => {
       x: 670.899,
       y: 89.1234
     };
-    expect(manhattanDistance(X, Y)).toBe(860.1324);
+    expect(manhattanDistance(X, Y)).toBeCloseTo(860.1324, 4);
   });
 
   test("returns manhattan distance when called with random values", () => {
@@ -56,6 +56,6 @@ describe("manhattanDistance", () => {
       x: -12.8976,
       y: -67.89
     };
-    expect(manhattanDistance(X, Y)).toBe(6960.6776);
+    expect(manhattanDistance(X, Y)).toBeCloseTo(6960.6776, 4);
   });
 });
