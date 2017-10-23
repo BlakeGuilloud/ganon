@@ -8,7 +8,7 @@ describe("areaOfConvexPolygon", () => {
       [0, 0],
       [1, 0],
       [1, 1]
-    ])).toBeCloseTo(0.50000, 4);
+    ])).toBeCloseTo(0.5, 4);
   });
 
   test("simple square: [[0, 0], [1, 0], [1, 1], [0, 1]] -- area must be 1", () => {
@@ -17,7 +17,7 @@ describe("areaOfConvexPolygon", () => {
       [1, 0],
       [1, 1],
       [0, 1]
-    ])).toBeCloseTo(1.000000000, 4);
+    ])).toBeCloseTo(1.0, 4);
   });
 
   test("simple 5 sided figure: [[0, 0], [1, 0], [1, 1], [0.5, 2], [0, 1] ] -- area must be 1.5", () => {
@@ -27,7 +27,7 @@ describe("areaOfConvexPolygon", () => {
       [1, 1],
       [0.5, 2],
       [0, 1]
-    ])).toBeCloseTo(1.5000000, 4);
+    ])).toBeCloseTo(1.5, 4);
   });
 
   test("simple 6 sided figure: [[0, 0], [1, 0], [1, 1], [0.75, 2], [0.25, 2], [0, 1] ] -- area must be 1.75", () => {
@@ -35,8 +35,9 @@ describe("areaOfConvexPolygon", () => {
       [0, 0],
       [1, 0],
       [1, 1],
-      [0.5, 2],
+      [0.75, 2],
+      [0.25, 2],
       [0, 1]
-    ])).toBeCloseTo(1.7500000, 4);
+    ])).toBeCloseTo(1.75, 4);
   });
 });
