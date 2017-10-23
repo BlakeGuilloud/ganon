@@ -14,7 +14,7 @@ describe("convertYardsToMeters", () => {
   });
 
   test("-1 yards is -0.9144 meters", () => {
-    expect(convertYardsToMeters(-1)).toBe(0.9144);
+    expect(convertYardsToMeters(-1)).toBe(-0.9144);
   });
 
   test("Throw error on invalid type", () => {
