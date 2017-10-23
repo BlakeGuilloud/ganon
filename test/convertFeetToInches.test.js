@@ -16,7 +16,6 @@ describe("convertFeetToInches", () => {
   it("should throw an error if feet is not a number", () => {
     expect(() => convertFeetToInches(false)).toThrow();
     expect(() => convertFeetToInches(null)).toThrow();
-    expect(() => convertFeetToInches(-5)).toThrow();
     expect(() => convertFeetToInches({})).toThrow();
     expect(() => convertFeetToInches("five")).toThrow();
   });
