@@ -2,21 +2,21 @@ const { xorEncryption } = require("../lib");
 
 const RESULTS = [
   {
-    data: 'my text is very good',
-    key: 'my key',
+    data: "my text is very good",
+    key: "my key",
     result: [0, 0, 0, 31, 0, 1, 25, 89, 73, 24, 69, 15, 8, 11, 89, 75, 2, 22, 2, 29],
     iterations: 1,
     outputAsString: false,
   }, {
-    data: 'Hey am i gonna get decrypted?',
-    key: 'Yup I think so',
-    result: 'Hey am i gonna get decrypted?',
+    data: "Hey am i gonna get decrypted?",
+    key: "Yup I think so",
+    result: "Hey am i gonna get decrypted?",
     iterations: 2,
     outputAsString: true,
   }, {
     data: [104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100],
     key: [42, 36, 12, 21, 3, 18, 2, 11, 2],
-    result: 'hello world',
+    result: "hello world",
     iterations: 2,
     outputAsString: true,
   }, {
@@ -38,7 +38,7 @@ const RESULTS = [
     iterations: 10,
     outputAsString: true,
   }, {
-    data: JSON.stringify({ i: { can: { encrypt: { serialized: 'data' }}}}),
+    data: JSON.stringify({ i: { can: { encrypt: { serialized: "data" }}}}),
     key: "I'm another very secure key",
     result: [50, 5, 4, 2, 91, 21, 77, 23, 9, 11, 80, 26, 13, 71, 23, 23, 67, 1, 28, 19, 1, 80, 95, 91, 73, 22, 28, 59, 78, 12, 76, 8, 20, 10, 16, 74, 95, 80, 68, 23, 17, 19, 91, 93, 14, 24, 30],
     iterations: 1,
@@ -56,7 +56,7 @@ const RESULTS = [
     iterations: 1,
     outputAsString: false,
   },
-]
+];
 
 describe("xorEncryption", () => {
   RESULTS.forEach(entry => {
@@ -67,6 +67,6 @@ describe("xorEncryption", () => {
       }
       expect(res).toEqual(entry.result);
     });
-  })
+  });
 
 });
