@@ -5,11 +5,11 @@ describe("last", () => {
     expect(last([1, 2, 3])).toBe(3);
   });
 
-  test("last of [] to equal undefined", () => {
-    expect(last([])).toBe(undefined);
+  test("last of {} to equal []", () => {
+    expect(last({})).toBe([]);
   });
 
-  test("last of \"hello\" to equal \"o\"", () => {
-    expect(last("hello")).toBe("o");
+  test("last of \"hello\" to equal [\"e\", \"l\", \"l\", \"o\"]", () => {
+    expect(last("hello")).toBe(["e", "l", "l", "o"]);
   });
 });
