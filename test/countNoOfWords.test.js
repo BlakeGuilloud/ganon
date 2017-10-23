@@ -9,6 +9,6 @@ describe("countNoOfWords", () => {
     expect(countNoOfWords()).toEqual(0);
   });
   test("countNoOfWords(A) where A is not a string or undefined", ()=>{
-     expect(countNoOfWords(2).toEqual(0));
-  })
+    expect(countNoOfWords(2).toEqual(0));
+  });
 });
