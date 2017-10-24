@@ -50,7 +50,25 @@ describe("objectPick", () => {
     expect(objectPick(obj, obj)).toEqual(obj);
     expect(objectPick(obj, true)).toEqual(obj);
     expect(objectPick(obj, 0)).toEqual(obj);
+    expect(objectPick(obj, {"name": "Gray"})).toEqual(obj);
   });
+
+  it("should return a \"picked\" object, excluding invalid params (not Strings, not String[]'s, empty []'s, etc.)", () => {
+    const obj = {
+      name: "Mark",
+      age: "33"
+    };
+
+    const pickedObj = {
+      name: "Mark",
+    };
+
+    expect(objectPick(obj, ["name", {}])).toEqual(pickedObj);
+    expect(objectPick(obj, [{}, "name"])).toEqual(pickedObj);
+    expect(objectPick(obj, [[], 5, {}, "name"])).toEqual(pickedObj);
+    expect(objectPick(obj, [[], 5, {}, "name"])).toEqual(pickedObj);
+  });
+
 
   it("should return picked obj", () => {
     let pickedObj = {
@@ -60,6 +78,23 @@ describe("objectPick", () => {
 
     expect(objectPick(testObj, "name")).toEqual({name: "Max"});
     expect(objectPick(testObj, ["name", "age"])).toEqual(pickedObj);
+    expect(objectPick({
+      class: ["elite", "bourgeois", "proletariat"],
+      disc: {
+        d: 50,
+        i: 25,
+        s: 85,
+        c: 75
+      },
+      trash: null,
+    }, ["class", "trash", ["disc", ["d", "c"]]])).toEqual({
+      class: ["elite", "bourgeois", "proletariat"],
+      disc: {
+        d: 50,
+        c: 75
+      },
+      trash: null
+    });
   });
 
   it("should return picked obj with new props if passed", () => {
