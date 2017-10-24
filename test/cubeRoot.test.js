@@ -1,6 +1,6 @@
 const { cubeRoot } = require("../lib");
 
-describe("cubeRoot",() => {
+describe("cubeRoot", () => {
   test("cube root of 125 to equal 5", () => {
     expect(cubeRoot(125)).toBe(5);
   });
@@ -11,5 +11,12 @@ describe("cubeRoot",() => {
 
   test("cube root of 27000 to equal 30", () => {
     expect(cubeRoot(27000)).toBe(30);
+  });
+
+  test("Throw error on invalid type", () => {
+    expect(() => cubeRoot("ten")).toThrow("Invalid Type");
+    expect(() => cubeRoot(null)).toThrow("Invalid Type");
+    expect(() => cubeRoot(undefined)).toThrow("Invalid Type");
+    expect(() => cubeRoot({})).toThrow("Invalid Type");
   });
 });
