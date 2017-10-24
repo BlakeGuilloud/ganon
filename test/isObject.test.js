@@ -11,6 +11,7 @@ describe("isObject", () => {
 
   test("isObject returns false for an array", () => {
     expect(isObject([1, 2, 3])).toBe(false);
+    expect(isObject([])).toBe(false);
   });
 
   test("isObject returns false for a string", () => {
