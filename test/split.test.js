@@ -1,15 +1,15 @@
 const { split } = require("../lib");
 
 describe("split", () => {
-  test("works on the empty list", () => {
+  it("works on the empty list", () => {
     expect(split([])).toEqual({fst: [], snd: []});
   });
 
-  test("works on a singleton", () => {
+  it("works on a singleton", () => {
     expect(split([1])).toEqual({fst: [1], snd: []});
   });
 
-  test("works on bigger lists", () => {
+  it("works on bigger lists", () => {
     expect(split([1,2])).toEqual({fst: [1], snd: [2]});
     expect(split([1,2,6])).toEqual({fst: [1,2], snd: [6]});
     expect(split([1,1,2,3,5,8,13])).toEqual({fst: [1,1,2,3], snd: [5,8,13]});
