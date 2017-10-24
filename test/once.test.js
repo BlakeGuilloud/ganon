@@ -49,6 +49,7 @@ describe("once", () => {
     let args;
     const arrayifyArgs = once(function() {
       args = Array.prototype.slice.call(arguments);
+      return args;
     });
 
     const actual = arrayifyArgs(1, 2, 3);
