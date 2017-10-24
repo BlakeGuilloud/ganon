@@ -10,7 +10,7 @@ describe("findAll", () => {
     expect(findAll([], 1)).toEqual([]);
   });
   test("findAll(A, B) throws an error if A is not an array or B is not present", () => {
-    expect(findAll(1, 1)).toThrowError("First argument must be an array.");
-    expect(findAll([1])).toThrowError("Please provide a second argument.");
+    expect(function(){ findAll(1, 1);}).toThrowError("First argument must be an array.");
+    expect(function(){ findAll([1]);}).toThrowError("Please provide a second argument.");
   });
 });
