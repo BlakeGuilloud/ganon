@@ -1,7 +1,7 @@
 const { convertMilesPerGallonToLitersPer100Kilometer } = require("../lib");
 
 describe("convertMilesPerGallonToLitersPer100Kilometer", () => {
-  test("1 MPG is 0.264172 gallon", () => {
+  test("1 MPG is 235.21458 l/100 km", () => {
     expect(convertMilesPerGallonToLitersPer100Kilometer(1)).toBeCloseTo(235.21458, 3);
     expect(convertMilesPerGallonToLitersPer100Kilometer(42.34)).toBeCloseTo(5.55537, 3);
     expect(convertMilesPerGallonToLitersPer100Kilometer(123.45)).toBeCloseTo(1.90534, 3);
