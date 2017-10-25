@@ -13,12 +13,19 @@ describe("sortBy", () => {
     expect(sortBy((a, b) => a.x > b.x, [{x: 3, y: 8}, {x: 1, y: 7}])).toEqual([{x: 1, y: 7}, {x: 3, y: 8}]);
   });
 
-  test("not defining a function will throw an error", () => {
+  test("test that first arguement is a function", () => {
     expect(sortBy([1, 2, 3, 0])).toThrow();
+    expect(sortBy(1, [1, 2, 3, 0])).toThrow();
+    expect(sortBy({a:1}, [1, 2, 3, 0])).toThrow();
+    expect(sortBy([1, 2], [1, 2, 3, 0])).toThrow();
+    expect(sortBy("test", [1, 2, 3, 0])).toThrow();
   });
 
-  test("not defining an array will throw an error", () => {
+  test("test that second arguement is an array", () => {
     expect(sortBy((a, b) => a > b)).toThrow();
+    expect(sortBy((a, b) => a > b), 1).toThrow();
+    expect(sortBy((a, b) => a > b), {a:1}).toThrow();
+    expect(sortBy((a, b) => a > b), "test").toThrow();
   });
 
   test("providing an empty array will throw an error", () => {
@@ -27,5 +34,6 @@ describe("sortBy", () => {
 
   test("providing an incorrect list type will throw an error", () => {
     expect(sortBy((a, b) => a.x > b.x, [3, 5, 1, -9, 2])).toThrow();
+    expect(sortBy((a, b) => a < b, {x: 3, y: 8}, {x: 1, y: 7})).toThrow();
   });
 });
