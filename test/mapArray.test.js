@@ -3,7 +3,13 @@ const { mapArray } = require("../lib");
 describe("mapArray", () => {
   it("returns an array of elements transformed by a callback function", () => {
     const arr = [1,2,3,4,5,6,7,8,9,10];
-    const callback = function(elem) { return elem ** 2; };
+    const callback = function(elem) {
+      var result = [];
+      for (var i = 0; i < elem.length; i++) {
+        result.push(elem[i] ** 2);
+      }
+      return result;
+    };
     expect(mapArray(arr, callback)).toEqual([1,4,9,16,25,36,49,64,81,100]);
   });
 

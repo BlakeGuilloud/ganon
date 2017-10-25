@@ -16,4 +16,12 @@ describe("isPrime", () => {
   test("95279 is prime", () => {
     expect(isPrime(95279)).toBe(true);
   });
+
+  test("2 is prime", () => {
+    expect(isPrime(2)).toBe(true);
+  });
+
+  test("0 is not prime", () => {
+    expect(isPrime(0)).toBe(false);
+  });
 });
