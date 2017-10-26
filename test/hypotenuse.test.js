@@ -16,4 +16,8 @@ describe("hypotenuse", () => {
   test("hypotenuse(3, 3) is close to 4.24", () => {
     expect(hypotenuse(3, 3)).toBeCloseTo(4.24);
   });
+
+  test("hypotenuse(-3, -4) is close to 5", () => {
+    expect(hypotenuse(-3, -4)).toBeCloseTo(5);
+  });
 });
