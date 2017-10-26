@@ -27,6 +27,6 @@ describe("hasGraphCycle", () => {
       {from: "D", to: "A"},
       {from: "E", to: "F"}
     ];
-    expect(hasGraphCycle(directedGraph)).toBe(true);
+    expect(hasGraphCycle(directedGraph)).toBe(false);
   });
 });
