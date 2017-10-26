@@ -20,4 +20,16 @@ describe("hypotenuse", () => {
   test("hypotenuse(-3, -4) is close to 5", () => {
     expect(hypotenuse(-3, -4)).toBeCloseTo(5);
   });
+
+  test("hypotenuse(1, NaN) is Nan", () => {
+    expect(hypotenuse(1, NaN)).toBeNaN();
+  });
+
+  test("hypotenuse(1, +Infinity) is +Infinity", () => {
+    expect(hypotenuse(1, +Infinity)).toBe(+Infinity);
+  });
+
+  test("hypotenuse(1, -Infinity) is +Infinity", () => {
+    expect(hypotenuse(1, -Infinity)).toBe(+Infinity);
+  });
 });
