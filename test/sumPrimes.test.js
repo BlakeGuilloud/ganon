@@ -1,6 +1,6 @@
 const { sumPrimes } = require("../lib");
 
-describe("averageAcceleration", () => {
+describe("sumPrimes", () => {
 
   test("The sum of primes less than or equal to 2", () => {
     expect(sumPrimes(2)).toBeCloseTo(2);
