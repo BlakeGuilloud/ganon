@@ -1,6 +1,6 @@
 const { isEmpty } = require("../lib");
 
-describe("caesarsCipher", () => {
+describe("isEmpty", () => {
   test("Empty array should be true", () => {
     expect(isEmpty([])).toEqual(true);
   });
