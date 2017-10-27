@@ -26,4 +26,18 @@ describe("isInteger", () => {
     expect(isInteger(7 + 1)).toBe(true);
     expect(isInteger(12 - 10000)).toBe(true);
   });
+
+  it("should fail for NaN", () => {
+    expect(isInteger(NaN)).toBe(false);
+  });
+
+  it("should fail for Infinite numbers", () => {
+    expect(isInteger(Infinity)).toBe(false);
+    expect(isInteger(-Infinity)).toBe(false);
+  });
+
+  it("should fail for an array with integers", () => {
+    expect(isInteger([1])).toBe(false);
+    expect(isInteger([1, 2, 3])).toBe(false);
+  });
 });
