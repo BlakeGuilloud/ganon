@@ -1,7 +1,6 @@
 const { sumPrimes } = require("../lib");
 
 describe("sumPrimes", () => {
-
   test("Throws when supplied with a non-evaluable paramter", () => {
     expect(() => {sumPrimes("foo");}).toThrow();
   });
