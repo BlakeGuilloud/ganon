@@ -2,11 +2,11 @@ const { scientificNotation } = require("../lib");
 
 describe("scientificNotation (all valid inputs, positive index)", () => {
   test("3 in scientific notation, no sig figs specified", () => {
-    expect(scientificNotation(3)).toBe("3 x 10<sup>5</sup>");
+    expect(scientificNotation(3)).toBe("3 x 10<sup>0</sup>");
   });
 
   test("3 in scientific notation, 5 sig figs", () => {
-    expect(scientificNotation(3, 5)).toBe("3.0000 x 10<sup>5</sup>");
+    expect(scientificNotation(3, 5)).toBe("3.0000 x 10<sup>0</sup>");
   });
 
   test("3214.567 in scientific notation, 2 sig figs", () => {
