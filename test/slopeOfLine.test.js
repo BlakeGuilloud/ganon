@@ -9,6 +9,8 @@ describe("slopeOfLine", () => {
     expect(() => slopeOfLine({x: 0, y: -4}, {x: 4})).toThrow();
     expect(() => slopeOfLine({x: 4, y: 2}, [3, 4])).toThrow();
     expect(() => slopeOfLine({x: "123a", y: 4}, {x: 4, y: 1})).toThrow();
+    expect(() => slopeOfLine(null, null)).toThrow();
+    expect(() => slopeOfLine(NaN, {x: 5, y: ""})).toThrow();
   });
 
   test("returns slope when given positive integers", () => {
@@ -54,6 +56,18 @@ describe("slopeOfLine", () => {
     };
     const B = {
       x: "-1241.412",
+      y: 3.15
+    };
+    expect(slopeOfLine(A, B)).toBeCloseTo(0.3729, 4);
+  });
+
+  test("returns slope when called with number strings and numbers", () => {
+    const A = {
+      x: "123",
+      y: 512
+    };
+    const B = {
+      x: -1241.412,
       y: 3.15
     };
     expect(slopeOfLine(A, B)).toBeCloseTo(0.3729, 4);
