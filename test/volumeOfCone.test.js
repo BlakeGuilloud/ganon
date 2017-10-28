@@ -15,4 +15,10 @@ describe("volumeOfCone", () => {
     expect(() => volumeOfCone(1, null)).toThrow("Invalid Type");
     expect(() => volumeOfCone(1, undefined)).toThrow("Invalid Type");
   });
+
+  test("Throw error on invalid value", () => {
+    expect(() => volumeOfCone(1, -1)).toThrow("Invalid Value");
+    expect(() => volumeOfCone(-1, 1)).toThrow("Invalid Value");
+    expect(() => volumeOfCone(-1, -1)).toThrow("Invalid Value");
+  });
 });
