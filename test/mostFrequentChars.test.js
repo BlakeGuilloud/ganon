@@ -8,7 +8,7 @@ describe("mostFrequentChars", () => {
     expect(mostFrequentChars("AAABBBCCDD")).toEqual(["A", "B"]);
   });
   test("Test empty string", () => {
-    expect(mostFrequentChars("")).toEqual("");
+    expect(mostFrequentChars("")).toEqual([]);
   });
 
   test("Throw error on invalid type", () => {
