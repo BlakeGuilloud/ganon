@@ -3,8 +3,10 @@ const {arrayMean} = require("../lib");
 describe("arrayMean", ()=>{
 
   test("yields result when array is valid", ()=>{
+    expect(arrayMean([])).toBe(0);
+    expect(arrayMean([10])).toBe(10);
     expect(arrayMean([1,2,3,4,5])).toBe(3);
-    expect(arrayMean([151,3,56,76,4,3])).toBe(48.43);
+    expect(arrayMean([151,3,56,76,4,3])).toBe(48.83);
     expect(arrayMean([23.23,567,245.7,778.2,55,35,4])).toBe(244.02);
   });
 
