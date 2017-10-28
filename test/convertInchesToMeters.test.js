@@ -8,7 +8,7 @@ describe("convertInchesToMeters", () => {
   test("Converts 271584 inches to meters", () => {
     expect(convertInchesToMeters(271584)).toBeCloseTo(6900);
   });
-  
+
   test("Converts 0 inches to meters", () => {
     expect(convertInchesToMeters(0)).toBe(0);
   });
