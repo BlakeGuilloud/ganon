@@ -28,4 +28,8 @@ describe("set", () => {
       a: { b: { d: "kitties are the best" }},
     });
   });
+
+  test("Set a value with an invalid path", () => {
+    expect(() => set(obj, 42, 1337)).toThrow("Path should be a string or array");
+  });
 });
