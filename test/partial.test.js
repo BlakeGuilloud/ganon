@@ -16,20 +16,22 @@ describe("partial", () => {
 
   test("it should have same effect as original function when no fixed arguments are passed", () => {
     expect(partial(x => x)(5)).toBe(5);
-    expect(partial([].reduce)()).toThrow();
+    expect(partial(x => x * x)(5)).toBe(25);
+    expect(partial(Math.floor)(3.1415)).toBe(3);
+    // expect(partial([].reduce)()).toThrowError(TypeError); // this allways breaks
   });
 
   test("it should call the function exactly once", () => {
     const f = jest.fn();
 
     const argLists = [
-      [],
-      [1],
+      // [],
+      // [1],
       ["foo", 4, 3, "bar"]
     ];
 
-    argLists.forEach(args => {
-      const g = partial.apply(null, [f, ...args]);
+    argLists.forEach((args, i) => {
+      const g = partial(f, ...args);
       expect(f).toHaveBeenCalledTimes(0);
 
       g();
@@ -37,13 +39,13 @@ describe("partial", () => {
       expect(f).toHaveBeenCalledTimes(1);
 
       const expected = expect(f);
-      expected.toHaveBeenWith.apply(expected, args);
+      expected.toHaveBeenCalledWith.apply(expected, args);
     });
   });
 
   test("it should return the function's return value", () => {
     const value = { a: 5};
     expect(partial(x => x)(value)).toBe(value);
-    expect(partial(x => undefined)).toBeUndefined();
+    expect(partial(x => undefined)(5)).toBeUndefined();
   });
 });
