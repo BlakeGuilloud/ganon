@@ -9,7 +9,7 @@ describe("circumferenceOfACircle", () => {
     expect(circumferenceOfACircle("10")).toBe(62.83);
   });
 
-  test("circle with a radius of 'asdf' to equal a circumference of 0", () => {
-    expect(circumferenceOfACircle("asdf")).toBe(0);
+  test("circle with a radius of 'asdf' throw error 'Invalid Argument'", () => {
+    expect(() => circumferenceOfACircle("asdf")).toThrow("Invalid Argument");
   });
 });
