@@ -16,4 +16,10 @@ describe("convertMetersToInches", () => {
   test("Converts 10.6707 meters to inches", () => {
     expect(convertMetersToInches(10.6707)).toBeCloseTo(420);
   });
+
+  test("Verify invalid values to throw error", () => {
+    expect(convertMetersToInches(-1)).toThrow();
+    expect(convertMetersToInches(undefined)).toThrow();
+    expect(convertMetersToInches("2")).toThrow();
+  });
 });
