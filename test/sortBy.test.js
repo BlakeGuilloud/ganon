@@ -14,26 +14,25 @@ describe("sortBy", () => {
   });
 
   test("test that first arguement is a function", () => {
-    expect(sortBy([1, 2, 3, 0])).toThrow();
-    expect(sortBy(1, [1, 2, 3, 0])).toThrow();
-    expect(sortBy({a:1}, [1, 2, 3, 0])).toThrow();
-    expect(sortBy([1, 2], [1, 2, 3, 0])).toThrow();
-    expect(sortBy("test", [1, 2, 3, 0])).toThrow();
+    expect(sortBy.bind(null, [1, 2, 3, 0])).toThrow();
+    expect(sortBy.bind(null, 1, [1, 2, 3, 0])).toThrow();
+    expect(sortBy.bind(null, {a:1}, [1, 2, 3, 0])).toThrow();
+    expect(sortBy.bind(null, [1, 2], [1, 2, 3, 0])).toThrow();
+    expect(sortBy.bind(null, "test", [1, 2, 3, 0])).toThrow();
   });
 
   test("test that second arguement is an array", () => {
-    expect(sortBy((a, b) => a > b)).toThrow();
-    expect(sortBy((a, b) => a > b), 1).toThrow();
-    expect(sortBy((a, b) => a > b), {a:1}).toThrow();
-    expect(sortBy((a, b) => a > b), "test").toThrow();
+    expect(sortBy.bind(null, (a, b) => a > b)).toThrow();
+    expect(sortBy.bind(null, (a, b) => a > b, 1)).toThrow();
+    expect(sortBy.bind(null, (a, b) => a > b, {a:1})).toThrow();
+    expect(sortBy.bind(null, (a, b) => a > b, "test")).toThrow();
   });
 
   test("providing an empty array will throw an error", () => {
-    expect(sortBy((a, b) => a < b), []).toThrow();
+    expect(sortBy.bind(null, (a, b) => a < b, [])).toThrow();
   });
 
   test("providing an incorrect list type will throw an error", () => {
-    expect(sortBy((a, b) => a.x > b.x, [3, 5, 1, -9, 2])).toThrow();
-    expect(sortBy((a, b) => a < b, {x: 3, y: 8}, {x: 1, y: 7})).toThrow();
+    expect(sortBy.bind(null, (a, b) => a < b, {x: 3, y: 8}, {x: 1, y: 7})).toThrow();
   });
 });
