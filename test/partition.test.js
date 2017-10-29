@@ -11,6 +11,10 @@ describe("partition", () => {
     expect(partition([1, 2, 3, 4, 5], 3)).toEqual([[1, 2, 3], [4, 5]]);
   });
 
+  test("should return empty array if passed an empty array", () => {
+    expect(partition([], 5)).toEqual([]);
+  });
+
   test("should throw an error if argument 1 is not an array", () => {
     expect(() => partition()).toThrow();
     expect(() => partition("array")).toThrow();
