@@ -7,8 +7,15 @@ describe("countCharOccurrenceInString", () => {
   });
 
   test("Throw error on invalid type", () => {
-    expect(() => countCharOccurrenceInString(null)).toThrow("Invalid Type");
-    expect(() => countCharOccurrenceInString(undefined)).toThrow("Invalid Type");
-    expect(() => countCharOccurrenceInString({})).toThrow("Invalid Type");
+    expect(() => countCharOccurrenceInString(null)).toThrowError(TypeError);
+    expect(() => countCharOccurrenceInString(undefined)).toThrowError(TypeError);
+    expect(() => countCharOccurrenceInString({})).toThrowError(TypeError);
+    expect(() => countCharOccurrenceInString("abcd", null)).toThrowError(TypeError);
+    expect(() => countCharOccurrenceInString("abcd", undefined)).toThrowError(TypeError);
+    expect(() => countCharOccurrenceInString("abcd", {})).toThrowError(TypeError);
+  });
+
+  test("Throw error if second argument is a string greater than one character", () => {
+    expect(() => countCharOccurrenceInString("abcd", "ab")).toThrow("Second argument to CountCharOccurrenceInString must be a one-character string");
   });
 });
