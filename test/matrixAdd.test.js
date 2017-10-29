@@ -2,7 +2,7 @@ const { matrixAdd } = require("../lib");
 
 /**
  * Define Matrix to be an array(s) of integers.
- * 
+ *
  * Single Dimentional Martrix = [1,2,3] [[1],[2],[3]]
  * Multidimentional :
  * [
