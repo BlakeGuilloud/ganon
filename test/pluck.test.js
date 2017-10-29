@@ -7,11 +7,16 @@ describe("pluck", () => {
   });
 
   test("should plucks values at given key", () => {
-    expect(pluck("id"), [{id:1},{id:2},{id:3}]).toEqual([1,2,3]);
+    expect(pluck("id", [{id:1},{id:2},{id:3}])).toEqual([1,2,3]);
   });
 
-  test("should returns undefined if element is not pluckable", () => {
+  test("should return undefined if element is not pluckable", () => {
     const array = [{id:1},{id:2},{name:"John Doe"},{id:4},5];
-    expect(pluck("id",array)).toBe([1,2,undefined,4,undefined]);
+    expect(pluck("id",array)).toEqual([1,2,undefined,4,undefined]);
+  });
+
+  test("should support sub arrays if included", () => {
+    const array = [{id:1},[{id:2},{name:"John Doe"}],{id:4},5];
+    expect(pluck("id",array)).toEqual([1,2,undefined,4,undefined]);
   });
 });
