@@ -1,27 +1,27 @@
-const { largest } = require("../lib");
+const { smallest } = require("../lib");
 
-describe("largest", () => {
-  test("Finds largest according to ordering function", () => {
-    expect(largest([1, 2, 3, 4, 5], (a, b) => a > b))
-      .toEqual(5);
+describe("smallest", () => {
+  test("Finds smallest according to ordering function", () => {
+    expect(smallest([1, 2, 3, 4, 5], (a, b) => a < b))
+      .toEqual(1);
 
-    expect(largest([3, 2, 5, 4, 1], (a, b) => a > b))
-      .toEqual(5);
+    expect(smallest([3, 2, 5, 4, 1], (a, b) => a < b))
+      .toEqual(1);
 
-    expect(largest(["a", "bc", "def"], (a, b) => a.length > b.length))
-      .toEqual("def");
+    expect(smallest(["a", "bc", "def"], (a, b) => a.length < b.length))
+      .toEqual("a");
   });
 
   test("Throws when parameter 1 is not an array", () => {
-    expect(() => largest(undefined, (a, b) => a > b)).toThrow();
-    expect(() => largest(null, (a, b) => a > b)).toThrow();
-    expect(() => largest("array", (a, b) => a > b)).toThrow();
-    expect(() => largest({}, (a, b) => a > b)).toThrow();
+    expect(() => smallest(undefined, (a, b) => a < b)).toThrow();
+    expect(() => smallest(null, (a, b) => a < b)).toThrow();
+    expect(() => smallest("array", (a, b) => a < b)).toThrow();
+    expect(() => smallest({}, (a, b) => a < b)).toThrow();
   });
 
   test("Throws when parameter 2 is not a function", () => {
-    expect(() => largest([1, 2, 3, 4, 5])).toThrow();
-    expect(() => largest([1, 2, 3, 4, 5], "function")).toThrow();
-    expect(() => largest([1, 2, 3, 4, 5], {})).toThrow();
+    expect(() => smallest([1, 2, 3, 4, 5])).toThrow();
+    expect(() => smallest([1, 2, 3, 4, 5], "function")).toThrow();
+    expect(() => smallest([1, 2, 3, 4, 5], {})).toThrow();
   });
 });
