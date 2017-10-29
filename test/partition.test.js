@@ -15,9 +15,9 @@ describe("partition", () => {
     expect(partition([], 5)).toEqual([]);
   });
 
-  test("should throw an error if argument 1 is not an array", () => {
-    expect(() => partition()).toThrow();
-    expect(() => partition("array")).toThrow();
-    expect(() => partition(1, [1, 2, 3])).toThrow();
+  test("should throw a TypeError if argument 1 is not an array", () => {
+    expect(() => partition()).toThrowError(TypeError);
+    expect(() => partition("array")).toThrowError(TypeError);
+    expect(() => partition(1, [1, 2, 3])).toThrowError(TypeError);
   });
 });
