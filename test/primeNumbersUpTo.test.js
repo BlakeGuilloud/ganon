@@ -11,7 +11,7 @@ describe("primeNumbersUpTo", () => {
 
   test("Prime numbers <= 37", () => {
     expect(primeNumbersUpTo(37)).toEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
-  })
+  });
 
   test("Throw error on invalid type", () => {
     expect(() => primeNumbersUpTo("This is not a number!")).toThrow("Invalid type");
