@@ -1,19 +1,19 @@
-const { prime } = require("../lib");
+const { nthPrime } = require("../lib");
 
-describe("prime", () => {
+describe("nthPrime", () => {
   test("return the first prime number", () => {
-    expect(prime(1)).toBe(2);
+    expect(nthPrime(1)).toBe(2);
   });
 
   test("return the second prime number", () => {
-    expect(prime(2)).toBe(3);
+    expect(nthPrime(2)).toBe(3);
   });
 
   test("return the fifth prime number", () => {
-    expect(prime(5)).toBe(11);
+    expect(nthPrime(5)).toBe(11);
   });
 
   test("return the tenth prime number", () => {
-    expect(prime(10)).toBe(29);
+    expect(nthPrime(10)).toBe(29);
   });
 });
