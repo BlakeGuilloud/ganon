@@ -15,7 +15,7 @@ describe("isEmailAddress", () => {
   });
 
   test("Is Invalid Email Address (boogie @ woogie. noogie) ?", () => {
-    expect(isEmailAddress("boogie @ woogie. fo' noogie")).toBe(true);
+    expect(isEmailAddress("boogie @ woogie. fo' noogie")).toBe(false);
   });
 
   test("Throw error on invalid type", () => {
