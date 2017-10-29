@@ -2,7 +2,7 @@ const { phi } = require("../lib");
 
 describe("phi", () => {
   test("phi(1) equals 1", () => {
-    expect(phi(7)).toBe(1);
+    expect(phi(1)).toBe(1);
   });
 
   test("phi(23197) equals 23196", () => {
