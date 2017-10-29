@@ -14,4 +14,10 @@ describe("convertGigabytesToBits", () => {
     expect(() => convertGigabytesToBits(undefined)).toThrow();
     expect(() => convertGigabytesToBits("1")).toThrow();
   });
+
+  test("throw error when the argument is a negative number", () => {
+    expect(() => convertGigabytesToBits(-1)).toThrow();
+    expect(() => convertGigabytesToBits(-128)).toThrow();
+    expect(() => convertGigabytesToBits(-69)).toThrow();
+  });
 });
