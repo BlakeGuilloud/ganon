@@ -53,3 +53,4 @@ export declare function swapCase(str: string): void;
 export declare function uppercase(s: string): void;
 export declare function without<T>(array: number[], itemsToRemove: T): void;
 export declare function xor(a: number, b: number): void;
+export declare function convertBytesToKilobytes(bytes: number): number;
