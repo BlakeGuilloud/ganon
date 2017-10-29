@@ -15,4 +15,8 @@ describe("convertBytesToKilobytes", () => {
     expect(() => convertBytesToKilobytes("1")).toThrow();
     expect(() => convertBytesToKilobytes([])).toThrow();
   });
+
+  test("throw error when the input is negative", () => {
+    expect(() => convertBytesToKilobytes(-1)).toThrow();
+  });
 });
