@@ -15,7 +15,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
-    "eslint": "^4.9.0",
+    "eslint": "^4.10.0",
     "jest": "^21.2.1",
     "pre-commit": "^1.2.2",
     "rimraf": "^2.6.2"
