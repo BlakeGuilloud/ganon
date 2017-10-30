@@ -3,7 +3,7 @@ const { isWebsite } = require("../lib");
 describe("isWebsite", () => {
   test("Is website (https://google.com) ?", () => {
     expect(isWebsite("https://google.com")).toBe(true);
-    expect(isWebsite("HTTPS://GOOGLE:COM")).toBe(true);
+    expect(isWebsite("HTTPS://GOOGLE.COM")).toBe(true);
   });
 
   test("Is website (www.github.com) ?", () => {
