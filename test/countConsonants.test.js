@@ -1,4 +1,5 @@
 const { countConsonants } = require("../lib");
+const testTypes = require("./testTypes");
 
 describe("countConsonants", () => {
   test("correct consonant count", () => {
@@ -15,9 +16,8 @@ describe("countConsonants", () => {
     expect(countConsonants("")).toEqual(0);
   });
   test("invalid parameters", () => {
-    expect(() => countConsonants({obj:"val"})).toThrowError(TypeError);
-    expect(() => countConsonants(["array"])).toThrowError(TypeError);
-    expect(() => countConsonants(undefined)).toThrowError(TypeError);
-    expect(() => countConsonants(null)).toThrowError(TypeError);
+    testTypes
+      .filter(t => typeof t != "string")
+      .forEach(t => expect(() => countConsonants(t)).toThrowError(TypeError));
   });
 });
