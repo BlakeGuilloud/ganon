@@ -7,6 +7,9 @@ describe("arrayRand", () => {
 
     let testArr2 = ["one", "two", "three", "four"];
     expect(testArr2).toContain(arrayRand(testArr2));
+
+    let testArr3 = ["singleitem"];
+    expect(testArr3).toContain(arrayRand(testArr3));
   });
 
   test("should return undefined if passed an empty array", () => {
