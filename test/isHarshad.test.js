@@ -16,4 +16,14 @@ describe("isHarshad", () => {
   test("isHarshad(1730) returns false", () => {
     expect(isHarshad(1730)).toBe(false);
   });
+  test("throw error when the input is negative", () => {
+    expect(() => isHarshad(-1)).toThrow();
+  });
+  test("throw error when the argument is not a number", () => {
+    expect(() => isHarshad(null)).toThrow();
+    expect(() => isHarshad(true)).toThrow();
+    expect(() => isHarshad(false)).toThrow();
+    expect(() => isHarshad(undefined)).toThrow();
+    expect(() => isHarshad([])).toThrow();
+  });
 });
