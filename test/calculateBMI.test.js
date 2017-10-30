@@ -20,5 +20,5 @@ describe("calculateBMI", () => {
     expect(() => calculateBMI(-60, 150)).toThrow();
     expect(() => calculateBMI(60, -150)).toThrow();
     expect(() => calculateBMI(-60, -150)).toThrow();
-  })
+  });
 });
