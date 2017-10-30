@@ -33,7 +33,7 @@ A very special thanks to [@csleong98](https://github.com/csleong98) for designin
 Huge props to [@andreasgruenh](https://github.com/andreasgruenh) and [@ktilcu](https://github.com/ktilcu) for helping collaborate.
 
 And the biggest of credit goes to all of our awesome [Contributors](https://github.com/BlakeGuilloud/ganon/graphs/contributors)!!
-
+thanks to all contributors .
 ### Usage
 ```bash
 $ yarn add ganon
