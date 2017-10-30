@@ -34,5 +34,6 @@ describe("convertDegreesToRadians", () => {
     expect(() => convertDegreesToRadians(true)).toThrow();
     expect(() => convertDegreesToRadians(undefined)).toThrow();
     expect(() => convertDegreesToRadians("4.5")).toThrow();
+    expect(() => convertDegreesToRadians(-2)).toThrow();
   });
 });
