@@ -9,6 +9,8 @@
   "files": [
     "dist"
   ],
+  
+  
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.1",
@@ -29,6 +31,7 @@
     "lint": "eslint --no-eslintrc -c .eslintrc ./lib ./test",
     "prepublish": "npm run clean && npm run build"
   },
+  
   "pre-commit": [
     "lint"
   ]
