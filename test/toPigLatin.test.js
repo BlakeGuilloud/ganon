@@ -15,9 +15,9 @@ describe("toPigLatin", () => {
     expect(toPigLatin("")).toEqual("");
   });
   test("invalid parameters", () => {
-    expect(toPigLatin({obj:"val"})).toThrowError(TypeError);
-    expect(toPigLatin(["array"])).toThrowError(TypeError);
-    expect(toPigLatin(undefined)).toThrowError(TypeError);
-    expect(toPigLatin(null)).toThrowError(TypeError);
+    expect(() => toPigLatin({obj:"val"})).toThrowError(TypeError);
+    expect(() => toPigLatin(["array"])).toThrowError(TypeError);
+    expect(() => toPigLatin(undefined)).toThrowError(TypeError);
+    expect(() => toPigLatin(null)).toThrowError(TypeError);
   });
 });
