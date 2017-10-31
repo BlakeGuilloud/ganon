@@ -145,7 +145,7 @@ module.exports = difference;
 We will need to accompany this method with a test(s) to ensure it returns the proper value:
 
 ```javascript
-// test/difference.test.js
+// test/difference.test.js 
 
 const { difference } = require("../lib");
 
