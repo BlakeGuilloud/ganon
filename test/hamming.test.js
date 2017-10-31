@@ -14,6 +14,6 @@ describe("hamming", () => {
   });
 
   test("should throw exception when DNA lengths do not match", () => {
-    expect(hamming("GGACG", "AGGACGTGG")).toThrow("DNA strands must be equal length");
+    expect(() => hamming("GGACG", "AGGACGTGG")).toThrow("DNA strands must be equal length");
   });
 });
