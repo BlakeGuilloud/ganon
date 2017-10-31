@@ -1,7 +1,6 @@
 const { debounce } = require("../lib");
 
 describe("debounce", () => {
-
   const callback = jest.fn();
   jest.useFakeTimers();
 
