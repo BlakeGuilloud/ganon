@@ -16,10 +16,10 @@ describe("allUniqueChars", () => {
   });
 
   test("Throw invalid type error on unexpected input", () => {
-    expect(allUniqueChars(null)).toThrow("Invalid type");
-    expect(allUniqueChars(undefined)).toThrow("Invalid type");
-    expect(allUniqueChars(39125)).toThrow("Invalid type");
-    expect(allUniqueChars(["This is a test"])).toThrow("Invalid type");
-    expect(allUniqueChars(true)).toThrow("Invalid type");
+    expect(function(){allUniqueChars(null);}).toThrow("Invalid type");
+    expect(function(){allUniqueChars(undefined);}).toThrow("Invalid type");
+    expect(function(){allUniqueChars(39125);}).toThrow("Invalid type");
+    expect(function(){allUniqueChars(["This is a test"]);}).toThrow("Invalid type");
+    expect(function(){allUniqueChars(true);}).toThrow("Invalid type");
   });
 });
