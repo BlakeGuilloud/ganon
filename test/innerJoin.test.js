@@ -2,11 +2,11 @@ const { innerJoin } = require("../lib");
 
 describe("innerJoin", () => {
   test("Inner join of number array", () => {
-    expect(innerJoin([1, 2, 3, 4], [6, 5, 4, 3])).toBe([3, 4]);
+    expect(innerJoin([1, 2, 3, 4], [6, 5, 4, 3])).toEqual([3, 4]);
   });
 
   test("Inner join of string array", () => {
-    expect(innerJoin(["The", "quick", "brown", "fox"], ["The", "lazy", "dog"])).toBe(["The"]);
+    expect(innerJoin(["The", "quick", "brown", "fox"], ["The", "lazy", "dog"])).toEqual(["The"]);
   });
 
   test("Throw invalid type", () => {
