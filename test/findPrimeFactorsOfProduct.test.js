@@ -1,7 +1,7 @@
 const { findPrimeFactorsOfProduct } = require("../lib");
 
 describe("findPrimeFactorsOfProduct", () => {
-  test("invalid inputs, edge case", () => {
+  test("invalid inputs", () => {
     expect(() => findPrimeFactorsOfProduct("ABC")).toThrow();
     expect(() => findPrimeFactorsOfProduct(NaN)).toThrow();
     expect(() => findPrimeFactorsOfProduct({b:"a"})).toThrow();
