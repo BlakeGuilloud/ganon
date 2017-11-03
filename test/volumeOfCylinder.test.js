@@ -11,6 +11,6 @@ describe("volumeOfCylinder", () => {
   });
 
   test("Should return the area of the cylinder", () => {
-    expect(volumeOfCylinder(10, 5)).toBe(20)
+    expect(volumeOfCylinder(10, 5)).toBe(20);
   });
-})
+});
