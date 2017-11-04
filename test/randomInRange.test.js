@@ -22,7 +22,7 @@ describe("randomInRange", () => {
     expect(() => randomInRange([1], 10)).toThrow();
     expect(() => randomInRange(true, 10)).toThrow();
     expect(() => randomInRange(1, 10.5)).toThrow();
-    expect(() => randomInRange(1.0, 10)).toThrow();
+    //expect(() => randomInRange(1.0, 10)).toThrow();
 
     // first param should be less than or equal to the second param
     expect(() => randomInRange(10, 0)).toThrow();
