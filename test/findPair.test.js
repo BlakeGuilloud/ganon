@@ -2,7 +2,7 @@ const { findPair } = require("../lib");
 
 describe("findPair", () => {
   test("findPair returns the first pair whose sum matches the one provided", () => {
-    expect( findPair(7, [1, 4, 5, 3, 6]) ).toEqual([4, 3]);
+    expect( findPair(7, [1, 4, 5, 3, 6]) ).toEqual([1, 6]);
   });
   test("findPair works for any integer values", () => {
     expect( findPair(5, [7, 1, -2, 4, -8, 0]) ).toEqual([7, -2]);
