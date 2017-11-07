@@ -11,7 +11,22 @@ describe("select", () => {
 
   test("returns an empty object when given no keys", () => {
     expect(select([], data)).toEqual({});
-    expect(select(null, data)).toEqual({});
+  });
+
+  test("throws if the first argument provided is not an instance of Array", () => {
+    const invalidFirstArgument = function() {
+      select(null, data);
+    };
+    expect(invalidFirstArgument).toThrowError(TypeError);
+    expect(invalidFirstArgument).toThrowError(/first argument/);
+  });
+
+  test("throws if the second argument provided is not of the Object datatype", () => {
+    const invalidSecondArgument = function() {
+      select([], 1);
+    };
+    expect(invalidSecondArgument).toThrowError(TypeError);
+    expect(invalidSecondArgument).toThrowError(/second argument/);
   });
 
   test("returns a new object", () => {

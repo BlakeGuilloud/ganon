@@ -8,7 +8,7 @@ describe("convertMinutesToSeconds",() => {
     expect(convertMinutesToSeconds(5)).toBe(300);
   });
   test("100 Minutes is 6000 Seconds",() => {
-    expect(convertMinutesToSeconds(10)).toBe(6000);
+    expect(convertMinutesToSeconds(10)).toBe(600);
   });
 
   test("Throw invalid type",() => {

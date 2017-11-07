@@ -10,6 +10,6 @@ describe("countUpperCase", () => {
   });
 
   test("counting uppercaps in a string 'aAb2BcCdD' should be 4", () => {
-    expect(countUpperCase("aAb2BcCdD")).toBe(5);
+    expect(countUpperCase("aAb2BcCdD")).toBe(4);
   });
 });
