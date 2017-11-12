@@ -5,6 +5,7 @@
   "types": "index.d.ts",
   "repository": "git@github.com:BlakeGuilloud/ganon.git",
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
+  "description": "A Javascript library",
   "license": "MIT",
   "files": [
     "dist"
