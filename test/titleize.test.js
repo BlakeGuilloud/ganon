@@ -6,7 +6,7 @@ describe("titleize", () => {
   });
 
   test("returns a title for a space and hyphen separated string", () => {
-    expect(titleize("x-men: the last stand'")).toEqual("X Men: The Last Stand");
+    expect(titleize("x-men: the last stand")).toEqual("X Men: The Last Stand");
   });
 
   test("returns an title for an undesrcore separated and lowercased string", () => {
