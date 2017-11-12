@@ -1,10 +1,11 @@
 {
   "name": "ganon",
-  "version": "2.0.29",
+  "version": "2.0.30",
   "main": "dist/index.js",
   "types": "index.d.ts",
   "repository": "git@github.com:BlakeGuilloud/ganon.git",
   "author": "Blake Guilloud <blake.guilloud@gmail.com>",
+  "description": "A Javascript library",
   "license": "MIT",
   "files": [
     "dist"
