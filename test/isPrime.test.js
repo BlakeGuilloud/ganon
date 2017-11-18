@@ -24,4 +24,9 @@ describe("isPrime", () => {
   test("0 is not prime", () => {
     expect(isPrime(0)).toBe(false);
   });
+
+  test("should throw on invalid inputs", () => {
+    expect(() => isPrime("string")).toThrow();
+    expect(() => isPrime(NaN)).toThrow();
+  });
 });
