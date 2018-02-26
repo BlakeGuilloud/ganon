@@ -2,8 +2,9 @@ const { isSymbol } = require("../lib");
 
 describe("isSymbol", () => {
   test("returns true for an empty string", () => {
-    const symbol = Symbol("foo");
-    expect(isSymbol(symbol)).toBeTruthy();
+    expect(isSymbol(Symbol())).toBeTruthy();
+    expect(isSymbol(Symbol("foo"))).toBeTruthy();
+    expect(isSymbol(Symbol.iterator)).toBeTruthy();
   });
 
   test("returns false if argument is not Symbol", () => {
