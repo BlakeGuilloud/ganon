@@ -1,3 +1,4 @@
+
 <p align="center">
   <img alt="Logo" src="./logo/ganon_version_2.png" />
 </p>
@@ -122,7 +123,7 @@ Run the test again:
 
 ```bash
 $ yarn test sum
-  
+
   PASS  problems/sum.test.js
     ✓ adds 1 + 2 to equal 3 (6ms)
     ✓ adds 3 + 4 to equal 7 (1ms)
