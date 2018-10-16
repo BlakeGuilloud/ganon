@@ -10,7 +10,7 @@ describe("length", () => {
   });
 
   test("length of 'length' to be 5", () => {
-    expect(length("length")).toBe(5);
+    expect(length("length")).toBe(6);
   });
 
   test("length of null to be undefined", () => {
