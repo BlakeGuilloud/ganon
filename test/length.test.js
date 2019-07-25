@@ -9,7 +9,7 @@ describe("length", () => {
     expect(length([1, 2, 3, 4, 5])).toBe(5);
   });
 
-  test("length of 'length' to be 5", () => {
+  test("length of 'length' to be 6", () => {
     expect(length("length")).toBe(6);
   });
 
