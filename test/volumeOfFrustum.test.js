@@ -2,8 +2,8 @@ const { volumeOfFrustum } = require("../lib");
 
 describe("volumeOfFrustum", () => {
 
-  test("Should return the volume of frtustum of cone", () => {
-    expect(volumeOfFrustum(5, 10, 10)).toBeCloseTo(1832.59);
+  test("Should return the volume of frustum of cone", () => {
+    expect(volumeOfFrustum(5, 10, 10)).toBeCloseTo(1832.595);
   });
 
   test("Should throw an error if called with incorrect params", () => {
