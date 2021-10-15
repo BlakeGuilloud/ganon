@@ -11,12 +11,12 @@ describe("getArrayElementCount", () => {
   });
 
   it("should throw error if first arg is not array", () => {
-    expect(getArrayElementCount("sdsds", 4)).toThrow("First argument should be an array");
-    expect(getArrayElementCount(452755, 4)).toThrow("First argument should be an array");
+    expect(() => getArrayElementCount("sdsds", 4)).toThrow("First argument should be an array");
+    expect(() => getArrayElementCount(452755, 4)).toThrow("First argument should be an array");
   });
 
   it("should throw error if second arg is not present or is not a number or array", () => {
-    expect(getArrayElementCount([5, 7, 4, 6, 5, 4], false)).toThrow("Second argument should be number");
-    expect(getArrayElementCount([3, 4, 56, 5, 6], "dss")).toThrow("Second argument should be number");
+    expect(() => getArrayElementCount([5, 7, 4, 6, 5, 4], false)).toThrow("Second argument should be number");
+    expect(() => getArrayElementCount([3, 4, 56, 5, 6], "dss")).toThrow("Second argument should be number");
   });
 });
